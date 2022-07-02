@@ -29,4 +29,7 @@ public interface CategoryService {
     //list in blogs.html
     List<Category> listCategory();
 
+    //========show page================
+    List<Category> listCategoryTop(Integer categoryNum);
+
 }

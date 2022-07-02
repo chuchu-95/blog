@@ -1,8 +1,17 @@
 package com.chuchu.blog.controller;
 
 
+import com.chuchu.blog.service.BlogService;
+import com.chuchu.blog.service.CategoryService;
+import com.chuchu.blog.service.TagService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @program: blog
@@ -13,43 +22,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
-    @GetMapping("/index")
-    public String index(){
-////        int i = 9 / 0;
-//        String blog = null;
-//        if(blog == null){
-//            throw new NotFoundException("The blog is not exist");
-//        }
-        System.out.println("-----------index--------------");
+    @Autowired
+    BlogService blogService;
+    @Autowired
+    CategoryService categoryService;
+    @Autowired
+    TagService tagService;
+
+    @GetMapping("/")
+    public String indexShow(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC)Pageable pageable,
+                            Model model){
+        model.addAttribute("page", blogService.listBlog(pageable));
+        model.addAttribute("tagList", tagService.listTagTop(8));
+        model.addAttribute("categoryList", categoryService.listCategoryTop(8));
+        model.addAttribute("recommendBlogList", blogService.listRecommendBlogs(8));
         return "index";
     }
 
-    @GetMapping("/blog")
-    public String blog(){
-        System.out.println("-----------blog--------------");
+    @GetMapping("/blog/{id}")
+    public String showBlog(@PathVariable("id")Long id,
+                           Model model){
+        model.addAttribute("blog", blogService.convertAndShow(id));
         return "blog";
-    }
-
-    @GetMapping("/categories")
-    public  String category(){
-        System.out.println("-----------category--------------");
-        return "category";
-    }
-
-    @GetMapping("/tags")
-    public  String tags(){
-        System.out.println("-----------tags--------------");
-        return "tags";
-    }
-    @GetMapping("/archive")
-    public  String archive(){
-        System.out.println("-----------archive--------------");
-        return "archive";
-    }
-
-    @GetMapping("/aboutMe")
-    public  String aboutMe(){
-        System.out.println("-----------aboutMe--------------");
-        return "aboutMe";
     }
 }

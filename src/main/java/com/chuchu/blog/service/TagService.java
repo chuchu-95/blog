@@ -27,4 +27,7 @@ public interface TagService {
     List<Tag> listTag();
 
     List<Tag> listTag(String ids);
+
+    //===========Show in blog page================
+    List<Tag> listTagTop(Integer tagNum);
 }

@@ -17,7 +17,7 @@ public class Comment {
     @Id
     @GeneratedValue
     private Long id;
-    private String nickName;
+    private String nickname;
     private String email;
     private String content;
     private String avatar; //image
@@ -29,10 +29,12 @@ public class Comment {
     private Blog blog;
 
     @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComment = new ArrayList<>();
+    private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
     private Comment parentComment;
+
+    private boolean adminComment;
 
     public Comment() {
     }
@@ -45,12 +47,12 @@ public class Comment {
         this.id = id;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setNickName(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getEmail() {
@@ -93,12 +95,12 @@ public class Comment {
         this.blog = blog;
     }
 
-    public List<Comment> getReplyComment() {
-        return replyComment;
+    public List<Comment> getReplyComments() {
+        return replyComments;
     }
 
-    public void setReplyComment(List<Comment> replyComment) {
-        this.replyComment = replyComment;
+    public void setReplyComments(List<Comment> replyComments) {
+        this.replyComments = replyComments;
     }
 
     public Comment getParentComment() {
@@ -109,15 +111,27 @@ public class Comment {
         this.parentComment = parentComment;
     }
 
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
                 "id=" + id +
-                ", nickName='" + nickName + '\'' +
+                ", nickName='" + nickname + '\'' +
                 ", email='" + email + '\'' +
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
+                ", blog=" + blog +
+                ", replyComment=" + replyComments +
+                ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
                 '}';
     }
 }

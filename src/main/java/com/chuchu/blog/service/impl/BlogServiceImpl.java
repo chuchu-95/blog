@@ -4,11 +4,14 @@ import com.chuchu.blog.NotFoundException;
 import com.chuchu.blog.dao.BlogRepository;
 import com.chuchu.blog.entity.Blog;
 import com.chuchu.blog.service.BlogService;
+import com.chuchu.blog.util.MarkdownUtils;
 import com.chuchu.blog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -98,5 +101,31 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(specification, pageable);
     }
 
-    //===========Show================
+    //===========Show page================
+    @Override
+    public Page<Blog> listBlog(Pageable pageable) {
+        return blogRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Blog> listRecommendBlogs(Integer rBlogNum) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
+        Pageable pageable = PageRequest.of(0, rBlogNum, sort);
+        return blogRepository.findTop(pageable);
+    }
+
+    @Transactional
+    @Override
+    public Blog convertAndShow(Long id) {
+        Blog preBlog = blogRepository.findById(id).orElse(null);
+        if(preBlog == null){
+            throw new NotFoundException("This blog doesn't exist");
+        }
+        Blog cvtBlog = new Blog();
+        BeanUtils.copyProperties(preBlog, cvtBlog);
+        String content = cvtBlog.getContent();
+        cvtBlog.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        blogRepository.updateView(id);
+        return cvtBlog;
+    }
 }

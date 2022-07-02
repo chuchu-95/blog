@@ -3,11 +3,14 @@ package com.chuchu.blog.service.impl;
 import com.chuchu.blog.NotFoundException;
 import com.chuchu.blog.dao.CategoryRepository;
 import com.chuchu.blog.entity.Category;
+import com.chuchu.blog.entity.Tag;
 import com.chuchu.blog.service.CategoryService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -69,5 +72,11 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.findAll();
     }
 
-    //===========Show================
+    //===========Show in blog================
+    @Override
+    public List<Category> listCategoryTop(Integer categoryNum) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "blogList.size");
+        Pageable pageable = PageRequest.of(0, categoryNum, sort);
+        return categoryRepository.findTop(pageable);
+    }
 }
