@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/css/typo.css"/>
+    <link rel="stylesheet" href="../static/lib/prism/prism.css">
+</head>
+<body>
+    <!-- navigation -->
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Chuchu's Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Home Page</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="bars icon"></i>Category</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>Archive</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>About Me</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui icon inverted transparent input m-margin-tb-tiny">
+                      <input type="text" placeholder="Search....">
+                      <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+          <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    
+    <!-- content -->
+    <div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn">
+        <div class="ui container">
+            <!-- top author -->
+            <div class="ui top attached segment">
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img src="../static/images/chuchu.jpg"
+                             th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                        <div class="content">
+                            <a href="#" th:text="${blog.user.nickName}" class="header">zhan</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i> 
+                        <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2017-10-01</span>
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i> 
+                        <span th:text="${blog.views}">2343</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- inset -->
+            <div class="ui attached segment">
+                <!--inset-->
+                <img src="https://unsplash.it/800/450?image=905"
+                     th:src="@{${blog.firstPicture}}"
+                     alt="" class="ui fluid rounded image">
+            </div>
+
+            <!-- content -->
+            <div class="ui attached segment">
+                <div class="ui right aligned basic segment">
+                    <div class="ui orange basic label" th:text="${blog.flag}">Reprinted</div>
+                </div>
+
+                <!-- headline -->
+                <h2 class="ui center aligned header" th:text="${blog.title}">AAAAAAAAAAA</h2>
+
+                <!-- article content -->
+                <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large"
+                                    th:utext="${blog.content}">
+
+                  <h1>English<i class="serif">Typo.css</i></h1><br/>
+
+                  <h2 id="tagline" class="serif"></h2>ABDGHIHIOHIOHO</h2>
+                  
+                  <ol id="table">
+                    <li><a href="#section1">About <i class="serif">Typo.css</i></a></li>
+                    <li><a href="#section2">Examples</a>
+                      <ul>
+                        <li><a href="#section2-1">eg1: </a></li>
+                        <li><a href="#section2-2">eg2: </a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#section3">Add</a>
+                      <ul>
+                        <li><a href="#appendix1"><i class="serif">Typo.css</i>Emphasis</a></li>
+                        <li><a href="#appendix2">Permission</a></li>
+                      </ul>
+                    </li>
+                  </ol>
+                  
+                  <h2 id="section1">1. About <i class="serif">Typo.css</i></h2>
+                  
+                  <p><i class="serif">Typo.css</i></p>
+                  <h4>How to do</h4>
+                  
+                  <p class="typo-first">It is a  <sup><a href="#appendix1"># Add1</a></sup>,hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh<i class="serif">Typo.css</i> it is important to eat.</p>
+                  
+                  <p><strong><i class="serif">Typo.css</i> Have read</strong></p>
+                  <table summary="Typo.css 的测试平台列表">
+                    <thead>
+                    <tr>
+                      <th>Python</th>
+                      <th>Java</th>
+                      <th>Chrome</th>
+                      <th>Safari</th>
+                      <th>Opera</th>
+                      <th>IE9</th>
+                      <th>IE8</th>
+                      <th>IE7</th>
+                      <th>IE6</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>OS X</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>Win 7</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>Win XP</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>-</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                    </tr>
+                    <tr>
+                      <td>Ubuntu</td>
+                      <td>✔</td>
+                      <td>✔</td>
+                      <td>-</td>
+                      <td>✔</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  
+                  <h4>SSSSSSSS</h4>
+                  
+                  <p>like a bird and you have to aaaaaaaaaa<abbr title="aaaaaaaaaa">着重号</abbr>eg:  <em class="typo-em">HHHHHH</em>）Howerverhch<a href="//html5doctor.com/u-element/">xxxxxxxxxx</a>。<i class="serif">Typo.css</i>Attention</p>
+                  <ol>
+                    <li>Semantic</li>
+                    <li>Appearence</li>
+                  </ol>
+
+
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.</p>
+                  <blockquote>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </blockquote>
+                  
+                  <h4>The standard Lorem Ipsum passage, used since the 1500s</h4>
+                  
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  
+                  <h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>
+                  
+                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+                    ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+
+<pre class="language-css"><code class="language-css">
+h1,h2,h3,h4,h5,h6 {
+    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
+}
+h1{font-size:1.8em;}
+h2{font-size:1.6em;}
+h3{font-size:1.4em;}
+h4{font-size:1.2em;}
+h5,h6{font-size:1em;}
+
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
+    margin:1em 0 0.6em;
+}
+</code>
+  </pre>
+                </div>
+                <!-- Tag -->
+                <div class="m-padded-lr-responsive">
+                    <div class="ui basic teal left pointing label"
+                        th:each="tag: ${blog.tagList}" th:text="${tag.name}">
+                        HHH
+                    </div>
+                </div>
+            </div>
+
+            <!-- blog messages -->
+            <div class="ui attached positive segment">
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ul class="list">
+                            <li><span th:text="${blog.user.userName}">SEAN</span><a href="#"target="_blank">[contact]</a></li>
+                            <li>Post Time: <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2017-10-02 09:08</span></li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+            <div  class="ui bottom attached segment" th:if="${blog.commentShow}">
+                <!-- content -->
+                <div id="comment-container"  class="ui teal segment">
+                    <div th:fragment="commentList">
+                        <div class="ui comments">
+                        <h3 class="ui dividing header">Comments</h3>
+                        <div class="comment" th:each="comment: ${comments}">
+                          <a class="avatar">
+                            <img src="../static/images/chuchu.jpg" th:src="@{${comment.avatar}}">
+                          </a>
+                          <div class="content">
+                            <a class="author">
+                                <span th:text="${comment.getNickname()}">Matt</span>
+                                <div class="ui mini basic teal left pointing label m-padded-mini"
+                                     th:if="${comment.adminComment}">博主
+                                </div>
+                            </a>
+                            <div class="metadata">
+                              <span class="date" th:text="${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}">
+                                  Today at 5:42PM
+                              </span>
+                            </div>
+                            <div class="text" th:text="${comment.content}">
+                              How artistic!
+                            </div>
+                            <div class="actions">
+                              <a class="reply"
+                                 data-commentid="1" data-commentnickname="Matt"
+                                 th:attr="data-commentid=${comment.id},
+                                          data-commentnickname=${comment.nickname}"
+                                 onclick="reply(this)">Reply</a>
+                            </div>
+                          </div>
+                          <div class="comments" >
+                            <div class="comment" th:each="reply: ${comment.replyComments}">
+                              <a class="avatar">
+                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
+                              </a>
+                              <div class="content">
+                                <a class="author" >
+                                    <span th:text="${reply.nickname}">AAA</span>
+                                    <div class="ui mini basic teal left pointing label m-padded-mini"
+                                         th:if="${reply.adminComment}">
+                                        Author
+                                    </div>&nbsp;
+                                    &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ sb</span>
+                                </a>
+                                <div class="metadata">
+                                    <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">
+                                        Today at 5:42PM
+                                    </span>
+                                </div>
+                                <div class="text" th:text="${reply.content}">
+                                    How artistic!
+                                </div>
+                                <div class="actions">
+                                    <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                       th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}"
+                                       onclick="reply(this)">Reply
+                                    </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--/*-->
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="../static/images/chuchu.jpg">
+                          </a>
+                          <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                              <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                              <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                              <a class="reply">Reply</a>
+                            </div>
+                          </div>
+                          <div class="comments">
+                            <div class="comment">
+                              <a class="avatar">
+                                <img src="../static/images/chuchu.jpg">
+                              </a>
+                              <div class="content">
+                                <a class="author">Jenny Hess</a>
+                                <div class="metadata">
+                                  <span class="date">Just now</span>
+                                </div>
+                                <div class="text">
+                                  Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                  <a class="reply">Reply</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="../static/images/chuchu.jpg">
+                          </a>
+                          <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                              <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                              Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                              <a class="reply">Reply</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--*/-->
+                      </div>
+                    </div>
+                </div>
+
+                <!-- publish comments -->
+                <div id="comment-form" class="ui form">
+                    <input type="hidden" name="blog.id" th:value="${blog.id}">
+                    <input type="hidden" name="parentComment.id" value="-1">
+                    <div class="field">
+                        <textarea name="content" placeholder="Please enter the comment..."></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="NickName"
+                                       th:value="${session.user}!=null ? ${session.user.nickName}">
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="Email"
+                                       th:value="${session.user}!=null ? ${session.user.email}">
+                            </div>
+                        </div>
+                        <div class="field  m-margin-bottom-small m-mobile-wide">
+                            <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide">
+                                <i class="edit icon"></i>Publish
+                            </button>
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+      <div class="ui vertical icon buttons ">
+        <button type="button" class="ui toc teal button" >Content</button>
+        <a href="#comment-container" class="ui teal button" >Comment</a>
+        <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+        <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
+      </div>
+    </div>
+
+    <div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+      <ol class="js-toc">
+
+      </ol>
+    </div>
+  
+    <div id="qrcode" class="ui wechat-qr flowing popup transition hidden "style="width: 130px !important;">
+      <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+    </div>
+  
+
+    <br>
+    <br>
+    <!-- bottom foot -->
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/chuchu.jpg" class="ui rounded image" alt="" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">GitHub</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">https://github.com/chuchu-95</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin">Email: chuchuwu02@gmail.com</a>
+                        <a href="#" class="item m-text-thin">QQ: 2645785278</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                    <p>This is Chuchu's blog, welcome to communicate with me!</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2022 - 2023 Designed by Chuchu</p>
+        </div>
+    </footer>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/semantic.min.js"></script>
+    <script src="../static/js/jquery.scrollTo.min.js"></script>
+
+    <script src="../static/lib/prism/prism.js"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js"></script>
+    <script src="../static/lib/qrcode/qrcode.min.js"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script th:inline="javascript">
+
+  $('.menu.toggle').click(function () {
+    $('.m-item').toggleClass('m-mobile-hide');
+  });
+
+  $('#payButton').popup({
+    popup : $('.payQR.popup'),
+    on : 'click',
+    position: 'bottom center'
+  });
+
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.js-toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.js-toc-content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3',
+  });
+
+  $('.toc.button').popup({
+    popup : $('.toc-container.popup'),
+    on : 'click',
+    position: 'left center'
+  });
+
+  $('.wechat').popup({
+    popup : $('.wechat-qr'),
+    position: 'left center'
+  });
+
+  var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
+  var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
+  var qrcode = new QRCode("qrcode", {
+    text: serurl+url,
+    width: 110,
+    height: 110,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+  
+  $('#toTop-button').click(function () {
+    $(window).scrollTo(0,500);
+  });
+
+
+  var waypoint = new Waypoint({
+    element: document.getElementById('waypoint'),
+    handler: function(direction) {
+      if (direction == 'down') {
+        $('#toolbar').show(100);
+      } else {
+        $('#toolbar').hide(500);
+      }
+      console.log('Scrolled to waypoint!  ' + direction);
+    }
+  })
+
+
+  //verify the comment
+  $('.ui.form').form({
+    fields: {
+      title: {
+        identifier: 'content',
+        rules: [{
+          type: 'empty',
+          prompt: 'Please enter the content'
+        }
+        ]
+      },
+      content: {
+        identifier: 'nickname',
+        rules: [{
+          type: 'empty',
+          prompt: 'Please enter your nickName'
+        }]
+      },
+      type: {
+        identifier: 'email',
+        rules: [{
+          type: 'email',
+          prompt: 'Please enter the right email'
+        }]
+      }
+    }
+  });
+
+  $(function () {
+    $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
+  });
+
+
+
+  $('#commentpost-btn').click(function () {
+    var boo = $('.ui.form').form('validate form');
+    if (boo) {
+      console.log('Success!');
+      postData();
+    } else {
+      console.log('Fail!');
+    }
+
+  });
+  
+  function postData() {
+    $("#comment-container").load(/*[[@{/comments}]]*/"",{
+      "parentComment.id" : $("[name='parentComment.id']").val(),
+      "blog.id" : $("[name='blog.id']").val(),
+      "nickname": $("[name='nickname']").val(),
+      "email"   : $("[name='email']").val(),
+      "content" : $("[name='content']").val()
+    },function (responseTxt, statusTxt, xhr) {
+//        $(window).scrollTo($('#comment-container'),500);
+      clearContent();
+    });
+  }
+
+  function clearContent() {
+    $("[name='content']").val('');
+    $("[name='parentComment.id']").val(-1);
+    $("[name='content']").attr("placeholder", "Please enter the comment...");
+  }
+
+
+  function reply(obj) {
+    var commentId = $(obj).data('commentid');
+    var commentNickname = $(obj).data('commentnickname');
+    $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+    $("[name='parentComment.id']").val(commentId);
+    $(window).scrollTo($('#comment-form'),500);
+  }
+
+
+</script>
+
+</body>
+</html>
