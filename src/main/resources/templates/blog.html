@@ -255,7 +255,7 @@ h5,h6{font-size:1em;}
                           </a>
                           <div class="content">
                             <a class="author">
-                                <span th:text="${comment.getNickname()}">Matt</span>
+                                <span th:text="${comment.nickName}">Matt</span>
                                 <div class="ui mini basic teal left pointing label m-padded-mini"
                                      th:if="${comment.adminComment}">博主
                                 </div>
@@ -272,7 +272,7 @@ h5,h6{font-size:1em;}
                               <a class="reply"
                                  data-commentid="1" data-commentnickname="Matt"
                                  th:attr="data-commentid=${comment.id},
-                                          data-commentnickname=${comment.nickname}"
+                                          data-commentnickname=${comment.nickName}"
                                  onclick="reply(this)">Reply</a>
                             </div>
                           </div>
@@ -283,12 +283,12 @@ h5,h6{font-size:1em;}
                               </a>
                               <div class="content">
                                 <a class="author" >
-                                    <span th:text="${reply.nickname}">AAA</span>
+                                    <span th:text="${reply.nickName}">AAA</span>
                                     <div class="ui mini basic teal left pointing label m-padded-mini"
                                          th:if="${reply.adminComment}">
                                         Author
                                     </div>&nbsp;
-                                    &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ sb</span>
+                                    &nbsp;<span th:text="|@ ${reply.parentComment.nickName}|" class="m-teal">@ sb</span>
                                 </a>
                                 <div class="metadata">
                                     <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">
@@ -300,7 +300,7 @@ h5,h6{font-size:1em;}
                                 </div>
                                 <div class="actions">
                                     <a class="reply" data-commentid="1" data-commentnickname="Matt"
-                                       th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}"
+                                       th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickName}"
                                        onclick="reply(this)">Reply
                                     </a>
                                 </div>
@@ -379,8 +379,8 @@ h5,h6{font-size:1em;}
                         <div class="field m-mobile-wide m-margin-bottom-small">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" name="nickname" placeholder="NickName"
-                                       th:value="${session.user}!=null ? ${session.user.nickName}">
+                                <input type="text" name="nickName" placeholder="NickName"
+                                       >
                             </div>
                         </div>
                         <div class="field m-mobile-wide m-margin-bottom-small">
@@ -542,7 +542,7 @@ h5,h6{font-size:1em;}
         ]
       },
       content: {
-        identifier: 'nickname',
+        identifier: 'nickName',
         rules: [{
           type: 'empty',
           prompt: 'Please enter your nickName'
@@ -579,7 +579,7 @@ h5,h6{font-size:1em;}
     $("#comment-container").load(/*[[@{/comments}]]*/"",{
       "parentComment.id" : $("[name='parentComment.id']").val(),
       "blog.id" : $("[name='blog.id']").val(),
-      "nickname": $("[name='nickname']").val(),
+      "nickName": $("[name='nickName']").val(),
       "email"   : $("[name='email']").val(),
       "content" : $("[name='content']").val()
     },function (responseTxt, statusTxt, xhr) {

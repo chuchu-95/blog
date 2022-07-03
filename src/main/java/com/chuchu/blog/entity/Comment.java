@@ -17,7 +17,7 @@ public class Comment {
     @Id
     @GeneratedValue
     private Long id;
-    private String nickname;
+    private String nickName;
     private String email;
     private String content;
     private String avatar; //image
@@ -47,12 +47,12 @@ public class Comment {
         this.id = id;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickName(String nickname) {
-        this.nickname = nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getEmail() {
@@ -123,7 +123,7 @@ public class Comment {
     public String toString() {
         return "Comment{" +
                 "id=" + id +
-                ", nickName='" + nickname + '\'' +
+                ", nickName='" + nickName + '\'' +
                 ", email='" + email + '\'' +
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +

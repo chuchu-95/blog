@@ -61,7 +61,11 @@ public class CommentServiceImpl implements CommentService {
     private void combineChildrenComments(List<Comment> dummyComments){
         for(Comment comment: dummyComments){
             List<Comment> replyComments = comment.getReplyComments();
+            //System.out.println("======REPLY=======");
             for(Comment reply: replyComments){
+//                System.out.println("=============");
+//                reply.toString();
+//                System.out.println("=============");
                 recursiveChildrenComments(reply);
             }
             comment.setReplyComments(tempComments);
@@ -76,15 +80,15 @@ public class CommentServiceImpl implements CommentService {
         if(replyComment.getReplyComments().size() > 0){
             List<Comment> replyAndReplyComments = new ArrayList<>();
             for(Comment rrComment: replyAndReplyComments){
+//                if(rrComment.getReplyComments().size() > 0){
+//                    recursiveChildrenComments(rrComment);
+//                }else{
+//                    tempComments.add(rrComment);
+//                }
+                tempComments.add(rrComment);
                 if(rrComment.getReplyComments().size() > 0){
                     recursiveChildrenComments(rrComment);
-                }else{
-                    tempComments.add(rrComment);
                 }
-//                tempComments.add(rrComment);
-//                if(rrComment.getReplyComment().size() > 0){
-//                    recursiveChildrenComments(rrComment);
-//                }
             }
         }
     }

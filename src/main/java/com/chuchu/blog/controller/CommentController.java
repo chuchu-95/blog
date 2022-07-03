@@ -38,8 +38,6 @@ public class CommentController {
 
     @PostMapping("/comments")
     public String postComment(Comment comment, HttpSession session){
-        comment.toString();
-        System.out.println("=============");
         //comment.setNickName("temp");
         Long blogId = comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
