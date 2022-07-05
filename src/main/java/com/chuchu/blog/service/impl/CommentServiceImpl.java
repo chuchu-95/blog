@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,10 +28,21 @@ public class CommentServiceImpl implements CommentService {
     public List<Comment> listTopCommentByBlogId(Long blogId) {
         Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
         List<Comment> topComments = commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
-        List<Comment> dummyComments = iterateEachTopComments((topComments));
+        List<Comment> dummyComments = iterateEachTopComments(topComments);
+        //temp===========
+        /*for(Comment d: dummyComments){
+            //d.toString();
+            if(d.getReplyComments().size()>0){
+                for(Comment r: d.getReplyComments()) {
+                    //System.out.println("========GETREPLYCOMMENTS=====");
+                }
+            }
+            //System.out.println("========TEMP=====");
+        }*/
         return dummyComments;
     }
 
+    @Transactional
     @Override
     public Comment saveComment(Comment comment) {
         //judge parent or child
@@ -50,11 +62,12 @@ public class CommentServiceImpl implements CommentService {
         //iterate top comments and add it to afterCombineComments
         for(Comment comments: topComments){
             //not just simply add, but deep copy using BeanUtils
+            //System.out.println("=============");
             Comment newComment = new Comment();
             BeanUtils.copyProperties(comments, newComment);
             dummyComments.add(newComment);
         }
-        combineChildrenComments((dummyComments));
+        combineChildrenComments(dummyComments);
         return dummyComments;
     }
 
@@ -63,13 +76,14 @@ public class CommentServiceImpl implements CommentService {
             List<Comment> replyComments = comment.getReplyComments();
             //System.out.println("======REPLY=======");
             for(Comment reply: replyComments){
-//                System.out.println("=============");
-//                reply.toString();
-//                System.out.println("=============");
+                //System.out.println("======Iterate reply=======");
                 recursiveChildrenComments(reply);
             }
+/*            if(tempComments.size() > 0){
+                System.out.println("========tempComments.size() > 0=====");
+            }*/
             comment.setReplyComments(tempComments);
-            tempComments.clear();
+            tempComments = new ArrayList<>();
         }
     }
 
@@ -77,18 +91,20 @@ public class CommentServiceImpl implements CommentService {
 
     private void recursiveChildrenComments(Comment replyComment){
         tempComments.add(replyComment);
+        System.out.println("======Iterate Iterate reply=======");
         if(replyComment.getReplyComments().size() > 0){
-            List<Comment> replyAndReplyComments = new ArrayList<>();
+            List<Comment> replyAndReplyComments = replyComment.getReplyComments();
             for(Comment rrComment: replyAndReplyComments){
-//                if(rrComment.getReplyComments().size() > 0){
-//                    recursiveChildrenComments(rrComment);
-//                }else{
-//                    tempComments.add(rrComment);
-//                }
-                tempComments.add(rrComment);
                 if(rrComment.getReplyComments().size() > 0){
                     recursiveChildrenComments(rrComment);
+                }else{
+                    tempComments.add(rrComment);
                 }
+//                tempComments.add(rrComment);
+//                System.out.println("======Iterate Iterate Iterate reply=======");
+//                if(rrComment.getReplyComments().size() > 0){
+//                    recursiveChildrenComments(rrComment);
+//                }
             }
         }
     }

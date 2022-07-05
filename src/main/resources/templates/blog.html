@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../static/css/me.css">
-    <link rel="stylesheet" href="../static/css/typo.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
     <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/css/me.css">
 </head>
 <body>
     <!-- navigation -->
@@ -241,130 +242,115 @@ h5,h6{font-size:1em;}
                             <li>Post Time: <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2017-10-02 09:08</span></li>
                         </ul>
                     </div>
-                  </div>
+                </div>
             </div>
-            <div  class="ui bottom attached segment" th:if="${blog.commentShow}">
+
+            <div class="ui bottom attached segment" th:if="${blog.commentShow}">
                 <!-- content -->
                 <div id="comment-container"  class="ui teal segment">
                     <div th:fragment="commentList">
-                        <div class="ui comments">
-                        <h3 class="ui dividing header">Comments</h3>
-                        <div class="comment" th:each="comment: ${comments}">
-                          <a class="avatar">
-                            <img src="../static/images/chuchu.jpg" th:src="@{${comment.avatar}}">
-                          </a>
-                          <div class="content">
-                            <a class="author">
-                                <span th:text="${comment.nickName}">Matt</span>
-                                <div class="ui mini basic teal left pointing label m-padded-mini"
-                                     th:if="${comment.adminComment}">博主
-                                </div>
-                            </a>
-                            <div class="metadata">
-                              <span class="date" th:text="${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}">
-                                  Today at 5:42PM
-                              </span>
-                            </div>
-                            <div class="text" th:text="${comment.content}">
-                              How artistic!
-                            </div>
-                            <div class="actions">
-                              <a class="reply"
-                                 data-commentid="1" data-commentnickname="Matt"
-                                 th:attr="data-commentid=${comment.id},
-                                          data-commentnickname=${comment.nickName}"
-                                 onclick="reply(this)">Reply</a>
-                            </div>
-                          </div>
-                          <div class="comments" >
-                            <div class="comment" th:each="reply: ${comment.replyComments}">
+                        <div class="ui threaded comments">
+                            <h3 class="ui dividing header">Comments</h3>
+                            <div class="comment" th:each="comment: ${comments}">
                               <a class="avatar">
-                                <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
+                                <img src="../static/images/chuchu.jpg" th:src="@{${comment.avatar}}">
                               </a>
+
                               <div class="content">
-                                <a class="author" >
-                                    <span th:text="${reply.nickName}">AAA</span>
+                                <a class="author">
+                                    <span th:text="${comment.nickName}">Matt</span>
                                     <div class="ui mini basic teal left pointing label m-padded-mini"
-                                         th:if="${reply.adminComment}">
-                                        Author
-                                    </div>&nbsp;
-                                    &nbsp;<span th:text="|@ ${reply.parentComment.nickName}|" class="m-teal">@ sb</span>
+                                         th:if="${comment.adminComment}">Author
+                                    </div>
                                 </a>
                                 <div class="metadata">
-                                    <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">
-                                        Today at 5:42PM
-                                    </span>
+                                  <span class="date" th:text="${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}">
+                                      Today at 5:42PM
+                                  </span>
                                 </div>
-                                <div class="text" th:text="${reply.content}">
-                                    How artistic!
+                                <div class="text" th:text="${comment.content}">
+                                  How artistic!
                                 </div>
                                 <div class="actions">
-                                    <a class="reply" data-commentid="1" data-commentnickname="Matt"
-                                       th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickName}"
-                                       onclick="reply(this)">Reply
+                                  <a class="reply"
+                                     data-commentid="1" data-commentnickname="Matt"
+                                     th:attr="data-commentid=${comment.id},
+                                              data-commentnickname=${comment.nickName}"
+                                     onclick="reply(this)">Reply</a>
+                                </div>
+                              </div>
+
+                              <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
+                                <div class="comment" th:each="reply: ${comment.replyComments}">
+                                  <a class="avatar">
+                                    <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
+                                  </a>
+                                  <div class="content">
+                                    <a class="author" >
+                                      <span th:text="${reply.nickName}">AAA</span>
+                                      <div class="ui mini basic teal left pointing label m-padded-mini"
+                                                 th:if="${reply.adminComment}">
+                                                Author
+                                      </div>&nbsp;
+                                      &nbsp;<span th:text="|@ ${reply.parentComment.nickName}|" class="m-teal">@ sb</span>
                                     </a>
+                                    <div class="metadata">
+                                      <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">
+                                          Today at 5:42PM
+                                      </span>
+                                    </div>
+                                    <div class="text" th:text="${reply.content}">
+                                      How artistic!
+                                    </div>
+                                    <div class="actions">
+                                      <a class="reply" data-commentid="1" data-commentnickname="Matt"
+                                          th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickName}"
+                                          onclick="reply(this)">Reply
+                                      </a>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-
-                        <!--/*-->
-                        <div class="comment">
-                          <a class="avatar">
-                            <img src="../static/images/chuchu.jpg">
-                          </a>
-                          <div class="content">
-                            <a class="author">Elliot Fu</a>
-                            <div class="metadata">
-                              <span class="date">Yesterday at 12:30AM</span>
-                            </div>
-                            <div class="text">
-                              <p>This has been very useful for my research. Thanks as well!</p>
-                            </div>
-                            <div class="actions">
-                              <a class="reply">Reply</a>
-                            </div>
-                          </div>
-                          <div class="comments">
+                            <!--/*-->
                             <div class="comment">
                               <a class="avatar">
                                 <img src="../static/images/chuchu.jpg">
                               </a>
                               <div class="content">
-                                <a class="author">Jenny Hess</a>
+                                <a class="author">Elliot Fu</a>
                                 <div class="metadata">
-                                  <span class="date">Just now</span>
+                                  <span class="date">Yesterday at 12:30AM</span>
                                 </div>
                                 <div class="text">
-                                  Elliot you are always so right :)
+                                  <p>This has been very useful for my research. Thanks as well!</p>
                                 </div>
                                 <div class="actions">
                                   <a class="reply">Reply</a>
                                 </div>
                               </div>
+                              <div class="comments">
+                                <div class="comment">
+                                  <a class="avatar">
+                                    <img src="../static/images/chuchu.jpg">
+                                  </a>
+                                  <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                      <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                      Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                      <a class="reply">Reply</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                            <!--*/-->
                         </div>
-                        <div class="comment">
-                          <a class="avatar">
-                            <img src="../static/images/chuchu.jpg">
-                          </a>
-                          <div class="content">
-                            <a class="author">Joe Henderson</a>
-                            <div class="metadata">
-                              <span class="date">5 days ago</span>
-                            </div>
-                            <div class="text">
-                              Dude, this is awesome. Thanks so much
-                            </div>
-                            <div class="actions">
-                              <a class="reply">Reply</a>
-                            </div>
-                          </div>
-                        </div>
-                        <!--*/-->
-                      </div>
                     </div>
                 </div>
 
@@ -380,7 +366,7 @@ h5,h6{font-size:1em;}
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
                                 <input type="text" name="nickName" placeholder="NickName"
-                                       >
+                                       th:value="${session.user}!=null ? ${session.user.nickName}">
                             </div>
                         </div>
                         <div class="field m-mobile-wide m-margin-bottom-small">
