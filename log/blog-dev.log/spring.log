@@ -1515,3 +1515,48 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2022-10-07 00:57:43.446  INFO 10168 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : index
 2022-10-07 00:57:50.355  INFO 10168 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
 2022-10-07 00:57:50.370  INFO 10168 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-10-07 00:59:22.447  INFO 10168 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-10-07 00:59:22.456  INFO 10168 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-10-07 01:02:48.817  INFO 10168 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 01:02:48.820  INFO 10168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-07 01:02:48.832  INFO 10168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-07 01:03:00.258  INFO 14080 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 14080 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-10-07 01:03:00.260 DEBUG 14080 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-10-07 01:03:00.261  INFO 14080 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-10-07 01:03:00.378  INFO 14080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-07 01:03:00.379  INFO 14080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-07 01:03:01.626  INFO 14080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-07 01:03:01.776  INFO 14080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 5 JPA repository interfaces.
+2022-10-07 01:03:02.972  INFO 14080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-07 01:03:02.980  INFO 14080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-07 01:03:02.980  INFO 14080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-10-07 01:03:03.066  INFO 14080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-07 01:03:03.067  INFO 14080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2685 ms
+2022-10-07 01:03:03.210  INFO 14080 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-07 01:03:03.245  INFO 14080 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-10-07 01:03:03.348  INFO 14080 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-07 01:03:03.428  INFO 14080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-07 01:03:04.067  INFO 14080 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-07 01:03:04.086  INFO 14080 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-07 01:03:05.006  INFO 14080 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-07 01:03:05.021  INFO 14080 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-07 01:03:06.894  WARN 14080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-07 01:03:07.420  INFO 14080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-10-07 01:03:08.143  INFO 14080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-07 01:03:08.203  INFO 14080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-07 01:03:08.220  INFO 14080 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 9.104 seconds (JVM running for 12.443)
+2022-10-07 01:03:14.098  INFO 14080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 01:03:14.098  INFO 14080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-07 01:03:14.099  INFO 14080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-07 01:03:14.127  INFO 14080 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-10-07 01:03:14.192  WARN 14080 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-10-07 01:03:14.201  WARN 14080 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-10-07 01:03:14.206  INFO 14080 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-10-07 01:03:18.451  INFO 14080 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-10-07 01:03:18.488  INFO 14080 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-10-07 01:03:19.757  INFO 14080 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-10-07 01:03:19.773  INFO 14080 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-10-07 01:03:21.782  INFO 14080 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[145, {}]}
+2022-10-07 01:03:21.983  INFO 14080 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-10-07 01:03:23.039  INFO 14080 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[145, {}]}
+2022-10-07 01:03:23.134  INFO 14080 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
