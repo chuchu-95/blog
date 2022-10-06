@@ -14,6 +14,7 @@ import java.util.List;
  * @create: 2022-05-15
  **/
 public interface BlogService {
+    //=============back end========================
     Blog saveBlog(Blog blog);
 
     void deleteBlog(Long id);
@@ -34,5 +35,11 @@ public interface BlogService {
 
     //blog.html change markdown to html
     Blog convertAndShow(Long id);
+
+    //search blogs
+    Page<Blog> listBlog(String query,Pageable pageable);
+
+    //tag page
+    Page<Blog> listBlog(Long tagId,Pageable pageable);
 
 }

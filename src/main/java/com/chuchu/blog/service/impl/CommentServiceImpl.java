@@ -63,6 +63,8 @@ public class CommentServiceImpl implements CommentService {
         for(Comment comments: topComments){
             //not just simply add, but deep copy using BeanUtils
             //System.out.println("=============");
+            //why not just change in the original?
+            //because you have to save the relationship of parents and children(original)
             Comment newComment = new Comment();
             BeanUtils.copyProperties(comments, newComment);
             dummyComments.add(newComment);
@@ -77,7 +79,7 @@ public class CommentServiceImpl implements CommentService {
             //System.out.println("======REPLY=======");
             for(Comment reply: replyComments){
                 //System.out.println("======Iterate reply=======");
-                recursiveChildrenComments(reply);
+                recursiveChildrenComments(reply, false);
             }
 /*            if(tempComments.size() > 0){
                 System.out.println("========tempComments.size() > 0=====");
@@ -89,16 +91,21 @@ public class CommentServiceImpl implements CommentService {
 
     private List<Comment> tempComments = new ArrayList<>();
 
-    private void recursiveChildrenComments(Comment replyComment){
+    private void recursiveChildrenComments(Comment replyComment, boolean deleteJudge){
         tempComments.add(replyComment);
         System.out.println("======Iterate Iterate reply=======");
         if(replyComment.getReplyComments().size() > 0){
             List<Comment> replyAndReplyComments = replyComment.getReplyComments();
             for(Comment rrComment: replyAndReplyComments){
                 if(rrComment.getReplyComments().size() > 0){
-                    recursiveChildrenComments(rrComment);
+                    recursiveChildrenComments(rrComment, deleteJudge);
                 }else{
-                    tempComments.add(rrComment);
+                    if(deleteJudge == false){
+                        tempComments.add(rrComment);
+                    }else{
+                        System.out.println(rrComment.getId());
+                        commentRepository.delete(rrComment);
+                    }
                 }
 //                tempComments.add(rrComment);
 //                System.out.println("======Iterate Iterate Iterate reply=======");
@@ -108,4 +115,56 @@ public class CommentServiceImpl implements CommentService {
             }
         }
     }
+
+    @Transactional
+    @Override
+    public void deleteComment(Long id) {
+        //iterate comments
+        /*
+        * 3 conditions:
+        *   leaf/ medium/ grandpa
+        * leaf: find its father and delete it from father's replyComments(List<Comment>)
+        *       delete itself from db
+        * medium: delete from father's reply list
+        *         set its replyComments = null;
+        *         delete itself from db;
+        * grandpa: set its replyComments = null;
+        *         delete itself;
+        * */
+
+        Comment curCmt = commentRepository.findById(id).orElse(null);
+//        for(Comment c: curCmt.getReplyComments()){
+//            System.out.println(1);
+//        }
+
+        if(curCmt.getParentComment() == null){ //grandpa
+            System.out.println("========grandPa========");
+            if(!curCmt.getReplyComments().isEmpty()){
+                recursiveChildrenComments(curCmt, true);
+                curCmt.setReplyComments(null);
+            }
+            commentRepository.deleteById(id);
+        }else{  //medium and leaf
+
+            //delete from father's replyComment
+            for(Comment cmt: curCmt.getParentComment().getReplyComments()){
+                if(cmt.getId() == id){
+                    System.out.println("========Leaf========");
+                    System.out.println("========CAN REMOVE========");
+                    curCmt.getParentComment().getReplyComments().remove(cmt);
+                    break;
+                }
+            }
+
+            if(!curCmt.getReplyComments().isEmpty()){
+                recursiveChildrenComments(curCmt, true);
+                curCmt.setReplyComments(null);
+            }
+
+            System.out.println("=========medium=========");
+            commentRepository.deleteById(id);
+        }
+        tempComments = new ArrayList<>();
+    }
+
 }

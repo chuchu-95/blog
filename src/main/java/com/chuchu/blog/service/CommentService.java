@@ -15,4 +15,6 @@ public interface CommentService {
     List<Comment> listTopCommentByBlogId(Long blogId);
 
     Comment saveComment(Comment comment);
+
+    void deleteComment(Long id);
 }

@@ -39,32 +39,37 @@
                         <h3 class="ui teal header">Tag</h3>
                     </div>
                     <div class="right aligned column">
-                        Total<h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(tags)}"> 14 </h2>
+                        Total<h2 class="ui orange header m-inline-block m-text-thin"
+                                 th:text="${#arrays.length(tags)}"> 14 </h2>
                     </div>
                 </div>
             </div>
 
             <div class="ui attached segment m-padded-tb-large">
-                <a href="#" class="ui basic left pointing large label m-margin-tb-tiny">
-                  <span th:text="${tag.name}">Taggg</span> 
-                  <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
+                <a href="#"
+                   th:href="@{/tags/{id}(id=${tag.id})}"
+                   class="ui basic left pointing large label m-margin-tb-tiny"
+                   th:classappend="${tag.id==activeTagId} ? 'teal'"
+                   th:each="tag : ${tags}">
+                  <span th:text="${tag.name}">Tag</span>
+                  <div class="detail" th:text="${#arrays.length(tag.blogList)}">23</div>
                 </a>
             </div>
 
             <div class="ui top attached teal segment">
-                <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
+                <div class="ui padded vertical segment m-padded-tb-large"
+                     th:each="blog : ${page.content}">
                   <div class="ui middle aligned mobile reversed stackable grid" >
                     <div class="eleven wide column">
                       <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">TITLE</a></h3>
-                      <p class="m-text" th:text="|${blog.description}......|">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa…...</p>
+                      <p class="m-text" th:text="|${blog.description}......|">aaaaaaaaaaaaaaaa…...</p>
                       <div class="ui grid">
                         <div class="row">
                           <div class="eleven wide column">
                             <div class="ui mini horizontal link list">
                               <div class="item">
-                                <img src="../static/images/chuchu.jpg" th:src="@{${blog.user.avatar}}"  alt="" class="ui avatar image">
-                                <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}" >zhan</a></div>
+                                <img src="../static/images/chuchu.png" th:src="@{/images/chuchu.png}"  alt="" class="ui avatar image">
+                                <div class="content"><a href="#" class="header" th:text="${blog.user.nickName}" >zhan</a></div>
                               </div>
                               <div class="item">
                                 <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2017-10-01</span>
@@ -75,12 +80,15 @@
                             </div>
                           </div>
                           <div class="right aligned five wide column">
-                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">More</a>
+                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin"
+                               th:text="${blog.category.name}">More</a>
                           </div>
                         </div>
                         <div class="row">
                           <div class="column">
-                            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui  basic left pointing label m-padded-mini m-text-thin" th:classappend="${tag.id==activeTagId} ? 'teal'" th:each="tag : ${blog.tags}" th:text="${tag.name}">tag</a>
+                            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui  basic left pointing label m-padded-mini m-text-thin"
+                               th:classappend="${tag.id==activeTagId} ? 'teal'"
+                               th:each="tag : ${blog.tagList}" th:text="${tag.name}">tag</a>
                           </div>
                         </div>
                       </div>
@@ -88,7 +96,8 @@
         
                     <div class="five wide column">
                       <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                        <img src="../static/images/chuchu.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
+                        <img src="../static/images/chuchu.jpg" th:src="@{${blog.firstPicture}}"
+                             alt="" class="ui rounded image">
                       </a>
                     </div>
         
@@ -101,14 +110,13 @@
             <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                    <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+                        <a href="#" th:href="@{'/tags/'+${activeTagId}(page=${page.number}-1)}"  th:unless="${page.first}" class="ui mini teal basic button">Page Up</a>
                     </div>
                     <div class="right aligned column">
-                    <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+                        <a href="#" th:href="@{'/tags/'+${activeTagId}(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">Page Down</a>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

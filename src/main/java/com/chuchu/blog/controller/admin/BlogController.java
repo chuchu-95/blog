@@ -81,14 +81,20 @@ public class BlogController {
 
     //post a new blog
     @PostMapping("/blogs")
-    public String postNewBlog(Blog blog, RedirectAttributes redirectAttributes, HttpSession session){
+    public String postNewBlog(Blog blog,
+                              RedirectAttributes redirectAttributes, HttpSession session){
         blog.setUser((User) session.getAttribute("user"));
         blog.setCategory(categoryService.getCategory(blog.getCategory().getId()));
         blog.setTagList(tagService.listTag(blog.getTagIds()));
         Blog b;
+        System.out.println("=======OutputID==========");
+        System.out.println(blog.getId());
+        System.out.println("=======ID==========");
         if (blog.getId() == null) {
+            System.out.println("============saveblog=================");
             b =  blogService.saveBlog(blog);
         } else {
+            System.out.println("============updateblog=================");
             b = blogService.updateBlog(blog, blog.getId());
         }
 

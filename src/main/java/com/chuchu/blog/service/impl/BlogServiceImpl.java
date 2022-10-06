@@ -7,6 +7,7 @@ import com.chuchu.blog.service.BlogService;
 import com.chuchu.blog.util.MarkdownUtils;
 import com.chuchu.blog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
+import com.chuchu.blog.util.MyBeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,13 +17,11 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javax.persistence.criteria.*;
 
 /**
  * @program: blog
@@ -39,7 +38,10 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
-        if (blog == null){
+        System.out.println("=======OutputID==========");
+        System.out.println(blog.getId());
+        System.out.println("=======ID==========");
+        if (blog.getId() == null){
             blog.setCreateTime(new Date());
             blog.setUpdateTime(new Date());
             blog.setViews(0);
@@ -62,7 +64,7 @@ public class BlogServiceImpl implements BlogService {
         if(oldBlog == null){
             throw new NotFoundException("The blog is not exist!");
         }
-        BeanUtils.copyProperties(blog, oldBlog);
+        BeanUtils.copyProperties(blog, oldBlog, MyBeanUtils.getNullPropertyNames(blog));
         oldBlog.setUpdateTime(new Date());
         return blogRepository.save(oldBlog);
     }
@@ -104,7 +106,8 @@ public class BlogServiceImpl implements BlogService {
     //===========Show page================
     @Override
     public Page<Blog> listBlog(Pageable pageable) {
-        return blogRepository.findAll(pageable);
+        //return blogRepository.findAll(pageable);
+        return blogRepository.findAllPublished(pageable);
     }
 
     @Override
@@ -127,5 +130,24 @@ public class BlogServiceImpl implements BlogService {
         cvtBlog.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
         blogRepository.updateView(id);
         return cvtBlog;
+    }
+
+
+    //search blog
+    @Override
+    public Page<Blog> listBlog(String query, Pageable pageable) {
+        return blogRepository.findByQuery(query,pageable);
+    }
+
+    //tag page
+    @Override
+    public Page<Blog> listBlog(Long tagId, Pageable pageable) {
+        return blogRepository.findAll(new Specification<Blog>() {
+            @Override
+            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
+                Join join = root.join("tagList");
+                return cb.equal(join.get("id"),tagId);
+            }
+        },pageable);
     }
 }

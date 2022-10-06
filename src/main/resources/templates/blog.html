@@ -41,15 +41,14 @@
             <div class="ui top attached segment">
                 <div class="ui horizontal link list">
                     <div class="item">
-                        <img src="../static/images/chuchu.jpg"
-                             th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                        <img src="../static/images/chuchu.jpg" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
                         <div class="content">
                             <a href="#" th:text="${blog.user.nickName}" class="header">zhan</a>
                         </div>
                     </div>
                     <div class="item">
                         <i class="calendar icon"></i> 
-                        <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2017-10-01</span>
+                        <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd HH:mm')}">2017-10-01</span>
                     </div>
                     <div class="item">
                         <i class="eye icon"></i> 
@@ -61,7 +60,7 @@
             <!-- inset -->
             <div class="ui attached segment">
                 <!--inset-->
-                <img src="https://unsplash.it/800/450?image=905"
+                <img src="../static/images/bg3.jpg"
                      th:src="@{${blog.firstPicture}}"
                      alt="" class="ui fluid rounded image">
             </div>
@@ -253,7 +252,7 @@ h5,h6{font-size:1em;}
                             <h3 class="ui dividing header">Comments</h3>
                             <div class="comment" th:each="comment: ${comments}">
                               <a class="avatar">
-                                <img src="../static/images/chuchu.jpg" th:src="@{${comment.avatar}}">
+                                <img src="../static/images/yun.jpg" th:src="@{${comment.avatar}}">
                               </a>
 
                               <div class="content">
@@ -276,14 +275,26 @@ h5,h6{font-size:1em;}
                                      data-commentid="1" data-commentnickname="Matt"
                                      th:attr="data-commentid=${comment.id},
                                               data-commentnickname=${comment.nickName}"
-                                     onclick="reply(this)">Reply</a>
+                                     onclick="reply(this)">
+                                      Reply
+                                  </a>
+
+                                  <a class="delete"
+                                     th:if="${session.user}!=null"
+                                     data-commentid="1" data-commentnickname="Matt"
+                                       th:attr="data-commentid=${comment.id},
+                                              data-blogid=${comment.blog.id}"
+                                       onclick="went(this)">
+                                        Delete
+                                  </a>
+
                                 </div>
                               </div>
 
                               <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
                                 <div class="comment" th:each="reply: ${comment.replyComments}">
                                   <a class="avatar">
-                                    <img src="https://unsplash.it/100/100?image=1005" th:src="@{${reply.avatar}}">
+                                    <img src="../static/images/cmtPict.png" th:src="@{${reply.avatar}}">
                                   </a>
                                   <div class="content">
                                     <a class="author" >
@@ -307,6 +318,16 @@ h5,h6{font-size:1em;}
                                           th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickName}"
                                           onclick="reply(this)">Reply
                                       </a>
+
+                                      <a class="delete"
+                                           th:if="${session.user}!=null"
+                                           data-commentid="1" data-commentnickname="Matt"
+                                           th:attr="data-commentid=${reply.id},
+                                              data-blogid=${reply.blog.id}"
+                                           onclick="went(this)">
+                                            Delete
+                                      </a>
+
                                     </div>
                                   </div>
                                 </div>
@@ -406,7 +427,17 @@ h5,h6{font-size:1em;}
     <div id="qrcode" class="ui wechat-qr flowing popup transition hidden "style="width: 130px !important;">
       <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
     </div>
-  
+
+    <div class="ui modal">
+        <div class="header title">DELETE COMMENTS</div>
+        <div class="content">
+            Are you sure to delete this comment? &nbsp;  (Including its following comments)?
+        </div>
+        <div class="actions">
+            <button class="ui negative button">NO</button>
+            <button class="ui positive button">YES</button>
+        </div>
+    </div>
 
     <br>
     <br>
@@ -589,6 +620,23 @@ h5,h6{font-size:1em;}
     $(window).scrollTo($('#comment-form'),500);
   }
 
+  function went(obj) {
+      // /*<![CDATA[*/
+      var url= "/comments/"+$(obj).data("commentid")+"/delete/"+$(obj).data("blogid");
+      // /*]]>*/
+      //var url= "[[@{/comments/}]]"+$(obj).data("commentid")+"/delete";
+
+      $(".ui.modal").modal({ //各种回调方法
+          onApprove:function () { //单击确认按钮
+              console.log("Confirm");
+              window.location.href=url;
+          },
+          onDeny:function () {  //单击取消按钮
+              console.log("Reject");
+          }
+      }).modal("show");
+      return false;
+  }
 
 </script>
 

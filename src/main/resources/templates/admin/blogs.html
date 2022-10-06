@@ -6,6 +6,8 @@
   <title>Mangement</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
   <link rel="stylesheet" href="../../static/css/me.css">
+
+
 </head>
 <body>
 
@@ -97,18 +99,19 @@
           <tbody>
           <tr th:each="blog,iterStat : ${page.content}">
             <td th:text="${iterStat.count}">1</td>
-            <td th:text="${blog.title}">AAAAAAA</td>
+            <td th:text="${blog.title}">AAAAAAAAAAAaAAAAAA</td>
             <td th:text="${blog.category.name}">tag</td>
             <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
-            <td th:text="${blog.published} ? 'published':'draft'">draft</td>
+            <td th:text="${blog.published} ? 'published':'draft'">published</td>
             <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
             <td>
               <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
-              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}"  class="ui mini red basic button">Delete</a>
+              <a onclick="go(this)" th:attr="data-url=${blog.id}"  class="ui mini red basic button">Delete</a>
             </td>
           </tr>
           </tbody>
           <tfoot>
+
           <tr>
             <th colspan="7">
               <div class="ui mini pagination menu" th:if="${page.totalPages}>1" >
@@ -127,6 +130,17 @@
           <p th:text="${message}">Congratulations, the operation succeeded</p>
         </div>
 
+      </div>
+
+      <div class="ui modal">
+        <div class="header title">DELETE BLOG</div>
+        <div class="content">
+          Are you sure to delete this blog?
+        </div>
+        <div class="actions">
+          <button class="ui negative button">NO</button>
+          <button class="ui positive button">YES</button>
+        </div>
       </div>
 
     </div>
@@ -205,6 +219,7 @@
       $("[name='page']").val(0);
       loaddata();
     });
+
     function loaddata() {
       $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
         title : $("[name='title']").val(),
@@ -213,6 +228,23 @@
         page : $("[name='page']").val()
       });
     }
+
+    function go(obj) {
+      // /*<![CDATA[*/
+      var url= "[[@{/admin/blogs/}]]"+$(obj).data("url")+"/delete";
+      // /*]]>*/
+      $(".ui.modal").modal({ //各种回调方法
+        onApprove:function () { //单击确认按钮
+          console.log("Confirm");
+          window.location.href=url;
+        },
+        onDeny:function () {  //单击取消按钮
+          console.log("Reject")
+        }
+      }).modal("show");
+      return false;
+    }
+
 
   </script>
 </body>

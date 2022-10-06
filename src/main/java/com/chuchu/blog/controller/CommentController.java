@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 /**
@@ -26,8 +27,8 @@ public class CommentController {
     @Autowired
     private BlogService blogService;
 
-//    @Value("${topComment.avatar}")
-    private String avatar = "/images/chuchu.jpg";;
+    //@Value("${comment.avatar}")
+    private String avatar = "/images/cmtPict.png";
 
     @GetMapping("/comments/{blogId}")
     public String showComments(@PathVariable Long blogId,
@@ -50,5 +51,15 @@ public class CommentController {
         }
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
+    }
+
+
+    // delete comment
+    @GetMapping("/comments/{commentId}/delete/{blogId}")
+    public String deleteComments(@PathVariable Long commentId, @PathVariable Long blogId){
+
+        commentService.deleteComment(commentId);
+
+        return "redirect:/blog/" + blogId;
     }
 }

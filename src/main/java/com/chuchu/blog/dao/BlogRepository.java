@@ -21,6 +21,10 @@ import java.util.List;
 @Repository
 public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
     //===========show page============
+    //list blogs that were published(hide saved blogs)
+    @Query("select b from Blog b where b.published = true")
+    Page<Blog> findAllPublished(Pageable pageable);
+
     //list recommend blogs
     @Query("select b from Blog b where b.recommend = true")
     List<Blog> findTop(Pageable pageable);
