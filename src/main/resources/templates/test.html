@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条</title>
+    <link rel="stylesheet" href="../static/css/semantic.min.css">
+
+</head>
+<body>
+<div class="ui container">
+    <div  class="ui secondary segment form">
+        <div class="ui modal">
+            <div class="header title">确定删除吗？</div>
+            <div class="content">
+                确定删除这个博客吗？
+            </div>
+            <div class="actions">
+                <button class="ui negative button">否</button>
+                <button class="ui positive button">是</button>
+            </div>
+        </div>
+        <input type="hidden" name="page" >
+        <div class="inline fields">
+            <div class="field">
+                <input type="text" name="title" placeholder="Title">
+            </div>
+            <div class="field">
+                <div class="ui labeled action input">
+                    <div class="ui type selection dropdown">
+                        <input type="hidden" name="categoryId">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Category</div>
+                        <div class="menu">
+                            <div th:each="category : ${categories}" class="item" data-value="1" th:data-value="${category.id}" th:text="${category.name}">Error Log</div>
+                            <!--/*-->
+                            <div class="item" data-value="2">Developer's manual</div>
+                            <!--*/-->
+                        </div>
+                    </div>
+                    <button id="clear-btn" class="ui compact button">clear</button>
+                </div>
+
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" id="recommend" name="recommend">
+                    <label for="recommend">Recommend</label>
+                </div>
+            </div>
+            <div class="field">
+                <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+        <i class="close icon"></i>
+        <div class="header">Prompt:</div>
+        <p th:text="${message}">Congratulations, the operation succeeded</p>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/semantic.min.js"></script>
+
+<script>
+    $(".ui.modal")
+        .modal({ //各种回调方法
+            onShow: function () {
+                console.log("正在显示");
+            },
+            onVisible: function () {
+                console.log("完全显示");
+            },
+            onHide: function () {
+                console.log("开始隐藏");
+            },
+            onHidden: function () {
+                console.log("完全隐藏");
+            },
+            onApprove:function () { //单击确认按钮
+                console.log("确认")
+            },
+            onDeny:function () {  //单击取消按钮
+                console.log("拒绝")
+            }
+        })
+        .modal("show");
+</script>
+</body>
+</html>

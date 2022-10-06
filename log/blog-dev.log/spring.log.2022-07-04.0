@@ -1,0 +1,1393 @@
+2022-07-04 22:52:56.925  INFO 12768 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 12768 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 22:52:56.934 DEBUG 12768 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 22:52:56.936  INFO 12768 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 22:52:57.031  INFO 12768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 22:52:57.032  INFO 12768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 22:52:58.396  INFO 12768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 22:52:58.553  INFO 12768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 5 JPA repository interfaces.
+2022-07-04 22:52:59.992  INFO 12768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 22:53:00.012  INFO 12768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 22:53:00.013  INFO 12768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 22:53:00.200  INFO 12768 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 22:53:00.201  INFO 12768 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3167 ms
+2022-07-04 22:53:00.482  INFO 12768 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 22:53:00.532  INFO 12768 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 22:53:00.678  INFO 12768 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 22:53:00.776  INFO 12768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 22:53:01.564  INFO 12768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 22:53:01.588  INFO 12768 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 22:53:02.341  INFO 12768 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 22:53:02.349  INFO 12768 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:53:04.072  WARN 12768 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 22:53:04.608  INFO 12768 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 22:53:05.485  INFO 12768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 22:53:05.546  INFO 12768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 22:53:05.562  INFO 12768 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 9.78 seconds (JVM running for 12.67)
+2022-07-04 22:53:14.895  INFO 12768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 22:53:14.895  INFO 12768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 22:53:14.896  INFO 12768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 22:53:14.929  INFO 12768 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 22:53:15.012  WARN 12768 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:53:15.024  WARN 12768 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:53:15.029  INFO 12768 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 22:53:18.263  INFO 12768 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 22:53:18.404  INFO 12768 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 22:53:20.287  INFO 12768 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 22:53:20.385 ERROR 12768 --- [http-nio-8080-exec-7] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/comments/52, Exception : {}
+
+org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.StackOverflowError
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1082)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.StackOverflowError: null
+	at java.util.Date.getYear(Date.java:651)
+	at java.sql.Timestamp.toString(Timestamp.java:279)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Comment.toString(Comment.java:124)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at java.util.AbstractCollection.toString(AbstractCollection.java:462)
+	at org.hibernate.collection.internal.PersistentBag.toString(PersistentBag.java:622)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+	at com.chuchu.blog.entity.Blog.toString(Blog.java:244)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:137)
+
+2022-07-04 22:53:20.402  WARN 12768 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.StackOverflowError]
+2022-07-04 22:54:29.400  INFO 12768 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:54:29.405  INFO 12768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 22:54:29.429  INFO 12768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 22:54:41.995  INFO 2960 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 2960 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 22:54:41.997 DEBUG 2960 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 22:54:41.997  INFO 2960 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 22:54:42.076  INFO 2960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 22:54:42.077  INFO 2960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 22:54:43.344  INFO 2960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 22:54:43.501  INFO 2960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 5 JPA repository interfaces.
+2022-07-04 22:54:44.982  INFO 2960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 22:54:44.997  INFO 2960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 22:54:44.998  INFO 2960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 22:54:45.194  INFO 2960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 22:54:45.195  INFO 2960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3115 ms
+2022-07-04 22:54:45.504  INFO 2960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 22:54:45.594  INFO 2960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 22:54:45.837  INFO 2960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 22:54:45.996  INFO 2960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 22:54:47.350  INFO 2960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 22:54:47.389  INFO 2960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 22:54:48.282  INFO 2960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 22:54:48.290  INFO 2960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:54:49.201  WARN 2960 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 22:54:49.449  INFO 2960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 22:54:49.786  INFO 2960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 22:54:49.817  INFO 2960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 22:54:49.825  INFO 2960 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 8.968 seconds (JVM running for 11.61)
+2022-07-04 22:54:55.970  INFO 2960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 22:54:55.971  INFO 2960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 22:54:55.972  INFO 2960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 22:54:56.008  INFO 2960 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 22:54:56.111  WARN 2960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:54:56.126  WARN 2960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:54:56.134  INFO 2960 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 22:55:00.753  INFO 2960 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 22:55:00.819  INFO 2960 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 22:55:01.879  INFO 2960 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 22:55:01.927  INFO 2960 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 22:55:29.565  INFO 2960 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:55:29.568  INFO 2960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 22:55:29.581  INFO 2960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 22:56:00.005  INFO 2432 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 2432 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 22:56:00.007 DEBUG 2432 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 22:56:00.007  INFO 2432 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 22:56:00.093  INFO 2432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 22:56:00.094  INFO 2432 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 22:56:01.328  INFO 2432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 22:56:01.477  INFO 2432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 5 JPA repository interfaces.
+2022-07-04 22:56:02.873  INFO 2432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 22:56:02.889  INFO 2432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 22:56:02.890  INFO 2432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 22:56:03.083  INFO 2432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 22:56:03.083  INFO 2432 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2987 ms
+2022-07-04 22:56:03.360  INFO 2432 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 22:56:03.437  INFO 2432 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 22:56:03.669  INFO 2432 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 22:56:03.826  INFO 2432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 22:56:05.203  INFO 2432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 22:56:05.239  INFO 2432 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 22:56:06.580  INFO 2432 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 22:56:06.595  INFO 2432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:56:08.389  WARN 2432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 22:56:08.902  INFO 2432 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 22:56:09.631  INFO 2432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 22:56:09.694  INFO 2432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 22:56:09.711  INFO 2432 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 10.753 seconds (JVM running for 13.218)
+2022-07-04 22:56:30.578  INFO 2432 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 22:56:30.579  INFO 2432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 22:56:30.580  INFO 2432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 22:56:30.608  INFO 2432 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 22:56:30.694  WARN 2432 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:56:30.707  WARN 2432 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:56:30.713  INFO 2432 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 22:56:58.280  INFO 2432 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 22:56:58.346  INFO 2432 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 22:56:59.233  INFO 2432 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 22:56:59.280  INFO 2432 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 22:58:42.593  INFO 2432 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:58:42.597  INFO 2432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 22:58:42.608  INFO 2432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 22:58:53.087  INFO 19032 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 19032 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 22:58:53.089 DEBUG 19032 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 22:58:53.089  INFO 19032 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 22:58:53.175  INFO 19032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 22:58:53.176  INFO 19032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 22:58:54.446  INFO 19032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 22:58:54.625  INFO 19032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 5 JPA repository interfaces.
+2022-07-04 22:58:56.237  INFO 19032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 22:58:56.254  INFO 19032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 22:58:56.254  INFO 19032 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 22:58:56.447  INFO 19032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 22:58:56.447  INFO 19032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3270 ms
+2022-07-04 22:58:56.721  INFO 19032 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 22:58:56.811  INFO 19032 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 22:58:57.043  INFO 19032 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 22:58:57.203  INFO 19032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 22:58:58.643  INFO 19032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 22:58:58.677  INFO 19032 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 22:59:00.079  INFO 19032 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 22:59:00.095  INFO 19032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 22:59:01.784  WARN 19032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 22:59:02.293  INFO 19032 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 22:59:02.691  INFO 19032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 22:59:02.724  INFO 19032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 22:59:02.733  INFO 19032 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 10.721 seconds (JVM running for 13.169)
+2022-07-04 22:59:22.764  INFO 19032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 22:59:22.764  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 22:59:22.767  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-07-04 22:59:22.829  INFO 19032 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 22:59:22.999  WARN 19032 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:59:23.022  WARN 19032 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 22:59:23.032  INFO 19032 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 22:59:35.373  INFO 19032 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 22:59:35.434  INFO 19032 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 22:59:36.456  INFO 19032 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 22:59:36.504  INFO 19032 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:03:54.795  INFO 19032 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:03:54.800  INFO 19032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 23:03:54.817  INFO 19032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 23:04:06.892  INFO 17388 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 17388 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 23:04:06.894 DEBUG 17388 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 23:04:06.894  INFO 17388 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 23:04:06.999  INFO 17388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 23:04:07.000  INFO 17388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 23:04:08.327  INFO 17388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 23:04:08.475  INFO 17388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 5 JPA repository interfaces.
+2022-07-04 23:04:09.824  INFO 17388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 23:04:09.840  INFO 17388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 23:04:09.841  INFO 17388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 23:04:10.028  INFO 17388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 23:04:10.028  INFO 17388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3027 ms
+2022-07-04 23:04:10.299  INFO 17388 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 23:04:10.376  INFO 17388 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 23:04:10.623  INFO 17388 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 23:04:10.781  INFO 17388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 23:04:12.163  INFO 17388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 23:04:12.226  INFO 17388 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 23:04:13.597  INFO 17388 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 23:04:13.612  INFO 17388 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:04:15.474  WARN 17388 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 23:04:15.991  INFO 17388 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 23:04:16.740  INFO 17388 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 23:04:16.803  INFO 17388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 23:04:16.821  INFO 17388 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 10.998 seconds (JVM running for 13.483)
+2022-07-04 23:04:25.543  INFO 17388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 23:04:25.544  INFO 17388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 23:04:25.546  INFO 17388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 23:04:25.611  INFO 17388 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 23:04:25.815  WARN 17388 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:04:25.839  WARN 17388 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:04:25.849  INFO 17388 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 23:04:28.533  INFO 17388 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 23:04:28.667  INFO 17388 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 23:04:30.870  INFO 17388 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:04:30.950  INFO 17388 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:04:41.759  INFO 17388 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='q', email='q@qq.com', content='nie', avatar='null', createTime=null, blog=Blog{id=52, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=80, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@7f8cd375]}
+2022-07-04 23:04:41.810  INFO 17388 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/52
+2022-07-04 23:04:41.823  INFO 17388 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:04:41.836  INFO 17388 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:05:31.981  INFO 17388 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:05:31.985  INFO 17388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 23:05:32.007  INFO 17388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 23:08:36.610  INFO 23596 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 23596 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 23:08:36.612 DEBUG 23596 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 23:08:36.613  INFO 23596 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 23:08:36.705  INFO 23596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 23:08:36.706  INFO 23596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 23:08:38.029  INFO 23596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 23:08:38.180  INFO 23596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 5 JPA repository interfaces.
+2022-07-04 23:08:39.532  INFO 23596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 23:08:39.548  INFO 23596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 23:08:39.548  INFO 23596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 23:08:39.734  INFO 23596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 23:08:39.734  INFO 23596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3027 ms
+2022-07-04 23:08:40.023  INFO 23596 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 23:08:40.097  INFO 23596 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 23:08:40.317  INFO 23596 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 23:08:40.475  INFO 23596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 23:08:41.849  INFO 23596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 23:08:41.890  INFO 23596 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 23:08:43.278  INFO 23596 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 23:08:43.293  INFO 23596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:08:45.105  WARN 23596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 23:08:45.618  INFO 23596 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 23:08:46.346  INFO 23596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 23:08:46.417  INFO 23596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 23:08:46.437  INFO 23596 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 10.874 seconds (JVM running for 13.298)
+2022-07-04 23:08:51.080  INFO 23596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 23:08:51.082  INFO 23596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 23:08:51.085  INFO 23596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-04 23:08:51.179  INFO 23596 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 23:08:51.486  WARN 23596 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:08:51.521  WARN 23596 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:08:51.537  INFO 23596 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 23:08:55.498  INFO 23596 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 23:08:55.633  INFO 23596 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 23:08:57.870  INFO 23596 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:08:57.991  INFO 23596 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:15:02.865  INFO 23596 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:15:02.872  INFO 23596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 23:15:02.899  INFO 23596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 23:15:17.974  INFO 10932 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 10932 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 23:15:17.977 DEBUG 10932 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 23:15:17.978  INFO 10932 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 23:15:18.055  INFO 10932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 23:15:18.056  INFO 10932 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 23:15:19.390  INFO 10932 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 23:15:19.542  INFO 10932 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 5 JPA repository interfaces.
+2022-07-04 23:15:20.949  INFO 10932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 23:15:20.967  INFO 10932 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 23:15:20.967  INFO 10932 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 23:15:21.176  INFO 10932 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 23:15:21.176  INFO 10932 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3119 ms
+2022-07-04 23:15:21.507  INFO 10932 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 23:15:21.598  INFO 10932 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 23:15:21.842  INFO 10932 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 23:15:22.019  INFO 10932 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 23:15:23.485  INFO 10932 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 23:15:23.528  INFO 10932 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 23:15:24.993  INFO 10932 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 23:15:25.009  INFO 10932 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:15:26.850  WARN 10932 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 23:15:27.359  INFO 10932 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 23:15:28.064  INFO 10932 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 23:15:28.121  INFO 10932 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 23:15:28.137  INFO 10932 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 11.239 seconds (JVM running for 14.41)
+2022-07-04 23:15:52.904  INFO 10932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 23:15:52.905  INFO 10932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 23:15:52.906  INFO 10932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 23:15:52.933  INFO 10932 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 23:15:53.012  WARN 10932 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:15:53.023  WARN 10932 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:15:53.027  INFO 10932 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 23:15:57.081  INFO 10932 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 23:15:57.212  INFO 10932 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 23:15:59.776  INFO 10932 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:15:59.855  INFO 10932 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:16:10.988  INFO 10932 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 23:16:11.007  INFO 10932 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 23:16:13.318  INFO 10932 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:16:13.366  INFO 10932 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:21:00.249  INFO 10932 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:21:00.261  INFO 10932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 23:21:00.504  INFO 10932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 23:21:12.118  INFO 14380 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 14380 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-07-04 23:21:12.121 DEBUG 14380 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-07-04 23:21:12.121  INFO 14380 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-07-04 23:21:12.214  INFO 14380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-04 23:21:12.215  INFO 14380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-04 23:21:13.452  INFO 14380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 23:21:13.599  INFO 14380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 5 JPA repository interfaces.
+2022-07-04 23:21:15.092  INFO 14380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 23:21:15.110  INFO 14380 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 23:21:15.110  INFO 14380 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-07-04 23:21:15.384  INFO 14380 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 23:21:15.384  INFO 14380 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3168 ms
+2022-07-04 23:21:15.729  INFO 14380 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 23:21:15.812  INFO 14380 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-07-04 23:21:16.067  INFO 14380 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 23:21:16.235  INFO 14380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 23:21:17.838  INFO 14380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 23:21:17.873  INFO 14380 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-04 23:21:19.323  INFO 14380 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 23:21:19.338  INFO 14380 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:21:21.123  WARN 14380 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 23:21:21.635  INFO 14380 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-04 23:21:22.367  INFO 14380 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-04 23:21:22.426  INFO 14380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 23:21:22.442  INFO 14380 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 11.347 seconds (JVM running for 15.565)
+2022-07-04 23:21:51.632  INFO 14380 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-04 23:21:51.632  INFO 14380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-04 23:21:51.633  INFO 14380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-04 23:21:51.671  INFO 14380 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-07-04 23:21:51.750  WARN 14380 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:21:51.762  WARN 14380 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-07-04 23:21:51.767  INFO 14380 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-07-04 23:21:55.196  INFO 14380 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[52, {}]}
+2022-07-04 23:21:55.343  INFO 14380 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-07-04 23:21:57.710  INFO 14380 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:21:57.803  INFO 14380 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:22:14.666  INFO 14380 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='s@qq.com', email='s@qq.com', content='sd', avatar='null', createTime=null, blog=Blog{id=52, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=80, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@5b7436fb]}
+2022-07-04 23:22:14.721  INFO 14380 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/52
+2022-07-04 23:22:14.732  INFO 14380 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/52', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[52, {}]}
+2022-07-04 23:22:14.747  INFO 14380 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-07-04 23:23:34.591  INFO 14380 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 23:23:34.594  INFO 14380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 23:23:34.604  INFO 14380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
