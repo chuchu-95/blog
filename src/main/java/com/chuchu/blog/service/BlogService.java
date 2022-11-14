@@ -5,7 +5,7 @@ import com.chuchu.blog.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @program: blog
@@ -41,5 +41,10 @@ public interface BlogService {
 
     //tag page
     Page<Blog> listBlog(Long tagId,Pageable pageable);
+
+    //archive page
+    public Map<String, List<Blog>> archiveBlog();
+
+    public Long countBlog();
 
 }
