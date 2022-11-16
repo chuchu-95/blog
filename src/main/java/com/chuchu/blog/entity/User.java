@@ -29,6 +29,9 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    //new add
+    private String description;
+
     //relationship
     @OneToMany(mappedBy = "user")
     private List<Blog> blogList = new ArrayList<>();
@@ -116,6 +119,14 @@ public class User {
         this.blogList = blogList;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -128,6 +139,8 @@ public class User {
                 ", type=" + type +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", description='" + description + '\'' +
+                ", blogList=" + blogList +
                 '}';
     }
 }

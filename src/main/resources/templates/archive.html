@@ -49,7 +49,7 @@
           <div class="ui fluid vertical menu">
             <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog : ${item.value}" th:if="${blog.published}">
               <span>
-                <i class="mini teal circle icon"></i><span th:text=" ${blog.title}">&nbsp;&nbsp;&nbsp;aaaaa</span>
+                <i class="mini teal circle icon"></i><span th:text="${blog.title}">&nbsp;&nbsp;&nbsp;aaaaa</span>
                 <div class="ui teal basic left pointing label m-padded-mini " th:text="${#dates.format(blog.updateTime,'MM-dd')}">September 3</div>
               </span>
               <div class="ui orange basic left pointing label m-padded-mini " th:text="${blog.flag}">original</div>

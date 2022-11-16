@@ -35,17 +35,115 @@
     <div class="ui container">
 
       <div class="ui stackable grid">
-        <div class="eleven wide column">
-          <div class="ui segment">
-            <img src="../static/images/chuchu.jpg" alt="" class="ui rounded image">
-          </div>
+        <div class="ten wide column">
+            <!-- content -->
+            <!--<div id="message-container" class="ui teal segment">
+                <div th:fragment="messageList">
+                    <div class="ui threaded comments" style="max-width: 100%;">
+                        <h3 class="ui dividing header">Msg Board</h3>
+                        <div class="comment" th:each="message : ${messages}">
+                            <a class="avatar">
+                                <img src="../static/images/chuchu.png" th:src="@{${message.avatar}}">
+                            </a>
+                            <div class="content">
+                                <a class="author">
+                                    <span th:text="${message.nickName}">Matt</span>
+                                    <div class="ui mini basic teal left pointing label m-padded-mini"
+                                         th:if="${message.adminComment}">
+                                        Author
+                                    </div>
+                                </a>
+                                <div class="metadata">
+                                    <span class="date" th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
+                                </div>
+                                <div class="text" th:text="${message.content}">太赞了！ </div>
+                                <div class="actions">
+                                    <a class="reply" data-messageid="1" data-messagenickname="Matt"
+                                       th:attr="data-messageid=${message.id},data-messagenickname=${message.nickName}" onclick="reply(this)">
+                                        Reply
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="comments" th:if="${#arrays.length(message.replyMessages)}>0">
+                                <div class="comment" th:each="reply : ${message.replyMessages}">
+                                    <a class="avatar">
+                                        <img src="../static/images/chuchu.png" th:src="@{${reply.avatar}}">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">
+                                            <span th:text="${reply.nickName}">小红</span>
+                                            <div class="ui mini basic teal left pointing label m-padded-mini"
+                                                 th:if="${reply.adminComment}">Author</div>
+                                            &nbsp;<span th:text="|@ ${reply.parentMessage.nickName}|" class="m-teal">@ 小白</span>
+                                        </a>
+                                        <div class="metadata">
+                                            <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">
+                                                 5:42
+                                            </span>
+                                        </div>
+                                        <div class="text" th:text="${reply.content}">太赞了！ </div>
+                                        <div class="actions">
+                                            <a class="reply" data-messageid="1" data-messagenickname="Matt"
+                                               th:attr="data-messageid=${reply.id},data-messagenickname=${reply.nickName}" onclick="reply(this)">
+                                                Reply
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            &lt;!&ndash; publish comments &ndash;&gt;
+            <div id="message-form" class="ui form">
+                <input type="hidden" name="parentMessage.id" value="-1">
+                <div class="field">
+                    <textarea name="content" placeholder="Please enter the message..."></textarea>
+                </div>
+                <div class="ui grid">
+                    <div class="five wide column">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickName" placeholder="NickName"
+                                       th:value="${session.user}!=null ? ${session.user.nickName}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="Email"
+                                       th:value="${session.user}!=null ? ${session.user.email}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right aligned six wide column">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <button id="messagepost-btn" type="button" class="ui teal button m-mobile-wide">
+                                <i class="edit icon"></i>
+                                Publish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
         </div>
-        <div class="five wide column">
+
+
+        <div class="six wide column">
           <div class="ui top attached segment">
-            <div class="ui header">关于我</div>
+            <div class="ui header">About Me</div>
           </div>
           <div class="ui attached segment">
-            <p class="m-text">Chuchu, a student from SuZhou University</p>
+            <p class="m-text">Chuchu, a student from SooChow University</p>
             <p class="m-text">This is my own blog, welcome!!</p>
           </div>
           <div class="ui attached segment">
@@ -64,13 +162,13 @@
             <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
           </div>
           <div class="ui bottom attached segment">
-            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+            <a href="https://github.com/chuchu-95" class="ui circular icon button" data-content="https://github.com/chuchu-95"><i class="github icon"></i></a>
             <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-            <a href="#" class="ui qq circular icon button" data-content="2645676969869" data-position="bottom center"><i class="qq icon"></i></a>
+            <a href="#" class="ui qq circular icon button" data-content="2645785278" data-position="bottom center"><i class="qq icon"></i></a>
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
-            <img src="../static/images/chuchu.jpg" alt="" class="ui rounded image" style="width: 110px">
+            <img src="../static/images/chuchu.png" th:src="@{/images/chuchu.png}" alt="" class="ui rounded image" style="width: 110px">
           </div>
           </div>
       </div>
@@ -119,7 +217,7 @@
   <script src="../static/js/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
 
-  <script>
+<script>
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
     });
@@ -130,6 +228,88 @@
     });
     $('.qq').popup();
 
-  </script>
+
+    $('#toTop-button').click(function () {
+        $(window).scrollTo(0,500);
+    });
+
+
+    //verify the comment
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter the content'
+                }
+                ]
+            },
+            content: {
+                identifier: 'nickName',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your nickName'
+                }]
+            },
+            type: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: 'Please enter the right email'
+                }]
+            }
+        }
+    });
+
+    $(function () {
+        $("#message-container").load(/*[[@{/messagecomment}]]*/"messagecomment");
+    });
+
+
+
+    $('#messagepost-btn').click(function () {
+        var boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('Success!');
+            postData();
+        } else {
+            console.log('Fail!');
+        }
+    });
+
+    function postData() {
+        //alert("test0");
+        $("#message-container").load(/*[[@{/message}]]*/"",{
+            "parentMessage.id" : $("[name='parentMessage.id']").val(),
+            "nickName": $("[name='nickName']").val(),
+            "email"   : $("[name='email']").val(),
+            "content" : $("[name='content']").val()
+        },function (responseTxt, statusTxt, xhr) {
+//        $(window).scrollTo($('#message-container'),500);
+            //2alert("test1");
+            clearContent();
+        });
+        alert("test0");
+    }
+
+    // 清除表单
+    function clearContent() {
+        $("[name='nickName']").val('');
+        $("[name='email']").val('');
+        $("[name='content']").val('');
+        $("[name='parentMessage.id']").val(-1);
+        $("[name='content']").attr("placeholder", "Please enter the message...");
+    }
+
+    function reply(obj) {
+        var messageId = $(obj).data('messageid');
+        var messageNickname = $(obj).data('messagenickname');
+        $("[name='content']").attr("placeholder", "@"+messageNickname).focus();
+        $("[name='parentMessage.id']").val(messageId);
+        $(window).scrollTo(0,500);
+    }
+
+</script>
 </body>
 </html>
