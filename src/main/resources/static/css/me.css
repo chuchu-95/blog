@@ -1,5 +1,9 @@
 body {
-    background: url("../images/bg.png");
+    background: url("../images/bg.png") no-repeat fixed center 0;
+    background-size: cover;
+    -webkit-background-size: cover;/* 兼容Webkit内核浏览器如Chrome和Safari */
+    -o-background-size: cover;/* 兼容Opera */
+    zoom: 1;
 }
 
 .m-padded-mini {
