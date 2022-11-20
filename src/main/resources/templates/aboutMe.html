@@ -279,15 +279,19 @@
     });
 
     function postData() {
-        //alert("test0");
-        $("#message-container").load(/*[[@{/message}]]*/"",{
-            "parentMessage.id" : $("[name='parentMessage.id']").val(),
+        $("#message-container").load(/*[[@{/postMessage}]]*/"",{
             "nickName": $("[name='nickName']").val(),
             "email"   : $("[name='email']").val(),
-            "content" : $("[name='content']").val()
+            "content" : $("[name='content']").val(),
+            "parentMessage.id" : $("[name='parentMessage.id']").val()
         },function (responseTxt, statusTxt, xhr) {
 //        $(window).scrollTo($('#message-container'),500);
             //2alert("test1");
+            alert($("[name='parentMessage.id']").val());
+            alert($("[name='nickName']").val());
+            alert($("[name='email']").val());
+            alert($("[name='content']").val());
+
             clearContent();
         });
         alert("test0");

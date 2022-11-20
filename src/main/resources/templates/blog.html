@@ -237,7 +237,10 @@ h5,h6{font-size:1em;}
                 <div class="ui middle aligned grid">
                     <div class="eleven wide column">
                         <ul class="list">
-                            <li><span th:text="${blog.user.userName}">SEAN</span><a href="#"target="_blank">[contact]</a></li>
+                            <li>
+                                <span th:text="${blog.user.userName}">SEAN</span>
+                                <a href="#"target="_blank" th:href="@{/aboutMe}">[contact]</a>
+                            </li>
                             <li>Post Time: <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2017-10-02 09:08</span></li>
                         </ul>
                     </div>
