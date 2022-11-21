@@ -1,0 +1,1122 @@
+2022-11-14 19:48:53.275  INFO 10076 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 10076 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 19:48:53.279 DEBUG 10076 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 19:48:53.280  INFO 10076 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 19:48:53.334  INFO 10076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 19:48:53.334  INFO 10076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 19:48:54.948  INFO 10076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 19:48:55.114  INFO 10076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 5 JPA repository interfaces.
+2022-11-14 19:48:56.084  INFO 10076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 19:48:56.094  INFO 10076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 19:48:56.094  INFO 10076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 19:48:56.166  INFO 10076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 19:48:56.166  INFO 10076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2830 ms
+2022-11-14 19:48:56.343  INFO 10076 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 19:48:56.399  INFO 10076 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 19:48:56.559  INFO 10076 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 19:48:56.668  INFO 10076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 19:48:57.457  INFO 10076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 19:48:57.498  INFO 10076 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 19:48:58.340  INFO 10076 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 19:48:58.349  INFO 10076 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 19:48:59.342  WARN 10076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 19:48:59.620  INFO 10076 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 19:49:00.134  INFO 10076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 19:49:00.195  INFO 10076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 19:49:00.211  INFO 10076 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 7.679 seconds (JVM running for 9.225)
+2022-11-14 19:51:29.053  INFO 10076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 19:51:29.053  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 19:51:29.055  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-14 19:51:29.093  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 19:51:29.187  WARN 10076 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 19:51:29.214  WARN 10076 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 19:51:29.219  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 19:51:40.511  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[145, {}]}
+2022-11-14 19:51:40.604  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:51:41.148  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[145, {}]}
+2022-11-14 19:51:41.207  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:51:44.614  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 19:51:44.633  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 19:51:49.337  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 19:51:49.356  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : tags
+2022-11-14 19:52:40.979  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 19:52:40.996  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 19:52:42.535  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[145, {}]}
+2022-11-14 19:52:42.549  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:52:43.055  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[145, {}]}
+2022-11-14 19:52:43.075  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:57:58.463  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 19:57:58.485  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 19:58:02.296  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 19:58:02.318  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:58:02.385 ERROR 10076 --- [http-nio-8080-exec-7] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 19:58:02.387  WARN 10076 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 19:58:02.854  INFO 10076 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:02.859  INFO 10076 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:15.816  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content=' cvdvd', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=-1, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:15.847  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:15.850  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:15.855  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:18.059  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='cdcdscsd', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=-1, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:18.083  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:18.086  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:18.095  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:22.924  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='cdscdscsd', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=169, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:22.943  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:22.947  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:22.956  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:25.538  INFO 10076 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='cdscsdc', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=170, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:25.559  INFO 10076 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:25.562  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:25.574  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:28.758  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='cdscsdc', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=168, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:28.775  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:28.778  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:28.789  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:31.249  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/172/delete/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.deleteComments', args=[172, 167]}
+2022-11-14 19:58:31.276  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/blog/167
+2022-11-14 19:58:31.281  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 19:58:31.289  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:58:31.348 ERROR 10076 --- [http-nio-8080-exec-3] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 19:58:31.350  WARN 10076 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 19:58:31.627  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:31.644  INFO 10076 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:36.424  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='csdcsdcsdcds', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=171, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:36.455  INFO 10076 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:36.459  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:36.470  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:40.954  INFO 10076 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.postComment', args=[Comment{id=null, nickName='chuchu95', email='chuchu02@gmail.com', content='cdscsdqwfdqe', avatar='null', createTime=null, blog=Blog{id=167, title='null', content='null', firstPicture='null', flag='null', views=null, shareStatement=false, commentShow=false, published=false, recommend=false, createTime=null, updateTime=null, category=null, tagList=[], user=null, commentList=[], tagIds='null', description='null'}, replyComment=[], parentComment=Comment{id=173, nickName='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComment=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@27f4986c]}
+2022-11-14 19:58:40.971  INFO 10076 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/comments/167
+2022-11-14 19:58:40.974  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:40.987  INFO 10076 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:43.297  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/174/delete/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.deleteComments', args=[174, 167]}
+2022-11-14 19:58:43.321  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/blog/167
+2022-11-14 19:58:43.326  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 19:58:43.333  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:58:43.380 ERROR 10076 --- [http-nio-8080-exec-9] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 19:58:43.381  WARN 10076 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 19:58:43.673  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:43.693  INFO 10076 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:49.069  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/173/delete/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.deleteComments', args=[173, 167]}
+2022-11-14 19:58:49.093  INFO 10076 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/blog/167
+2022-11-14 19:58:49.097  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 19:58:49.108  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:58:49.162 ERROR 10076 --- [http-nio-8080-exec-10] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 19:58:49.165  WARN 10076 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 19:58:49.414  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:49.430  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 19:58:52.499  INFO 10076 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/169/delete/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.deleteComments', args=[169, 167]}
+2022-11-14 19:58:52.532  WARN 10076 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1451, SQLState: 23000
+2022-11-14 19:58:52.532 ERROR 10076 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Cannot delete or update a parent row: a foreign key constraint fails (`blog`.`t_comment`, CONSTRAINT `FK4jj284r3pb7japogvo6h72q95` FOREIGN KEY (`parent_comment_id`) REFERENCES `t_comment` (`id`))
+2022-11-14 19:58:52.534  INFO 10076 --- [http-nio-8080-exec-1] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2022-11-14 19:58:52.544 ERROR 10076 --- [http-nio-8080-exec-1] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/comments/169/delete/167, Exception : {}
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.chuchu.blog.service.impl.CommentServiceImpl$$EnhancerBySpringCGLIB$$8045b900.deleteComment(<generated>)
+	at com.chuchu.blog.controller.CommentController.deleteComments(CommentController.java:61)
+	at com.chuchu.blog.controller.CommentController$$FastClassBySpringCGLIB$$7cd0d194.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.chuchu.blog.controller.CommentController$$EnhancerBySpringCGLIB$$36f87dfb.deleteComments(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:3698)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:3958)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:123)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1402)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3285)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2420)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 79 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`blog`.`t_comment`, CONSTRAINT `FK4jj284r3pb7japogvo6h72q95` FOREIGN KEY (`parent_comment_id`) REFERENCES `t_comment` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 100 common frames omitted
+
+2022-11-14 19:58:52.545  WARN 10076 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2022-11-14 19:58:56.335  INFO 10076 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/171/delete/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.deleteComments', args=[171, 167]}
+2022-11-14 19:58:56.358  INFO 10076 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : redirect:/blog/167
+2022-11-14 19:58:56.363  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 19:58:56.370  INFO 10076 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 19:58:56.430 ERROR 10076 --- [http-nio-8080-exec-4] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 19:58:56.431  WARN 10076 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 19:58:56.678  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 19:58:56.689  INFO 10076 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 20:00:09.132  INFO 10076 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 20:00:09.147  INFO 10076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 20:00:09.147  INFO 10076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 21:47:34.101  INFO 12092 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 12092 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 21:47:34.103 DEBUG 12092 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 21:47:34.103  INFO 12092 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 21:47:34.163  INFO 12092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 21:47:34.163  INFO 12092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 21:47:35.444  INFO 12092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 21:47:35.553  INFO 12092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2022-11-14 21:47:36.643  INFO 12092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 21:47:36.656  INFO 12092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 21:47:36.656  INFO 12092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 21:47:36.824  INFO 12092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 21:47:36.824  INFO 12092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2660 ms
+2022-11-14 21:47:37.041  INFO 12092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 21:47:37.122  INFO 12092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 21:47:37.399  INFO 12092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 21:47:37.541  INFO 12092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 21:47:39.167  INFO 12092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 21:47:39.201  INFO 12092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 21:47:40.946  INFO 12092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 21:47:40.962  INFO 12092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 21:47:42.660  WARN 12092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 21:47:43.098  INFO 12092 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 21:47:44.338  INFO 12092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 21:47:44.436  INFO 12092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 21:47:44.451  INFO 12092 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 11.288 seconds (JVM running for 13.24)
+2022-11-14 21:53:06.516  INFO 12092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 21:53:06.517  INFO 12092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 21:53:06.519  INFO 12092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-14 21:53:06.588  INFO 12092 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 21:53:06.870  WARN 12092 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 21:53:06.903  WARN 12092 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 21:53:06.917  INFO 12092 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 21:53:30.694  INFO 12092 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 21:53:30.730  INFO 12092 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 21:53:33.039  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[167, {}]}
+2022-11-14 21:53:33.203  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 21:53:33.334 ERROR 12092 --- [http-nio-8080-exec-10] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/blog/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 21:53:33.336  WARN 12092 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 21:53:33.828  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/167', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[167, {}]}
+2022-11-14 21:53:33.887  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 21:56:21.510  INFO 12092 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 21:56:21.539  INFO 12092 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 21:56:24.863  INFO 12092 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/93', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 93, {}]}
+2022-11-14 21:56:24.877  INFO 12092 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 21:56:24.965 ERROR 12092 --- [http-nio-8080-exec-10] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/categories/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 21:56:24.966  WARN 12092 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 21:57:18.084  INFO 12092 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 21:57:18.111  INFO 12092 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:02:08.141  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:02:08.155  INFO 12092 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:02:09.527  INFO 12092 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:02:09.565  INFO 12092 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : tags
+2022-11-14 22:02:09.662 ERROR 12092 --- [http-nio-8080-exec-2] c.c.b.e.ControllerExceptionHandler       : Request URL : http://localhost:8080/tags/s, Exception : {}
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.NumberFormatException: For input string: "s"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:700)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+
+2022-11-14 22:02:09.663  WARN 12092 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "s"]
+2022-11-14 22:12:46.241  INFO 12092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:12:46.248  INFO 12092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:12:46.288  INFO 12092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 22:13:06.591  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 10260 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:13:06.592 DEBUG 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:13:06.592  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:13:06.637  INFO 10260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 22:13:06.638  INFO 10260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 22:13:07.700  INFO 10260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:13:07.826  INFO 10260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:13:09.173  INFO 10260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:13:09.180  INFO 10260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:13:09.180  INFO 10260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:13:09.547  INFO 10260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:13:09.547  INFO 10260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2908 ms
+2022-11-14 22:13:09.813  INFO 10260 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:13:09.863  INFO 10260 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 22:13:10.007  INFO 10260 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 22:13:10.131  INFO 10260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 22:13:11.329  INFO 10260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 22:13:11.395  INFO 10260 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:13:12.586  INFO 10260 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:13:12.593  INFO 10260 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:13:14.289  WARN 10260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:13:14.776  INFO 10260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:13:15.526  INFO 10260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:13:15.559  INFO 10260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:13:15.575  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 9.568 seconds (JVM running for 10.82)
+2022-11-14 22:13:23.251  INFO 10260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 22:13:23.252  INFO 10260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 22:13:23.253  INFO 10260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-14 22:13:26.346  INFO 10260 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 22:13:26.484  WARN 10260 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:13:26.494  WARN 10260 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:13:26.501  INFO 10260 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:13:31.373  INFO 10260 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:13:31.426  INFO 10260 --- [http-nio-8080-exec-10] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:14:07.574  INFO 10260 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/119', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[119, {}]}
+2022-11-14 22:14:07.714  INFO 10260 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 22:14:08.304  INFO 10260 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/119', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[119, {}]}
+2022-11-14 22:14:08.358  INFO 10260 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 22:20:04.747  INFO 10260 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/119', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[119, {}]}
+2022-11-14 22:20:04.763  INFO 10260 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 22:20:05.538  INFO 10260 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/119', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[119, {}]}
+2022-11-14 22:20:05.590  INFO 10260 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 22:22:04.613  INFO 10260 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 22:22:04.649  INFO 10260 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:22:07.299  INFO 10260 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:22:07.335  INFO 10260 --- [http-nio-8080-exec-7] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:22:07.390 ERROR 10260 --- [http-nio-8080-exec-7] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-7] Exception processing template "category": Error resolving template [category], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [category], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+2022-11-14 22:22:07.974  INFO 10260 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:22:07.985  INFO 10260 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:22:08.013  INFO 10260 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 22:22:26.299  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 10260 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:22:26.300 DEBUG 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:22:26.301  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:22:27.028  INFO 10260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:22:27.130  INFO 10260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:22:27.540  INFO 10260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:22:27.542  INFO 10260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:22:27.543  INFO 10260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:22:27.591  INFO 10260 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:22:27.592  INFO 10260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1281 ms
+2022-11-14 22:22:27.780  INFO 10260 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:22:27.794  INFO 10260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-11-14 22:22:27.849  INFO 10260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-11-14 22:22:27.850  INFO 10260 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:22:28.070  INFO 10260 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:22:28.071  INFO 10260 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:22:29.019  WARN 10260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:22:29.259  INFO 10260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:22:29.596  INFO 10260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:22:29.625  INFO 10260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:22:29.632  INFO 10260 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 3.495 seconds (JVM running for 564.873)
+2022-11-14 22:22:29.637  INFO 10260 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-14 22:22:35.608  INFO 10260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:22:35.610  INFO 10260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-11-14 22:22:35.637  INFO 10260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-14 22:22:55.983  INFO 11592 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 11592 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:22:55.984 DEBUG 11592 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:22:55.985  INFO 11592 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:22:56.038  INFO 11592 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 22:22:56.038  INFO 11592 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 22:22:57.009  INFO 11592 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:22:57.198  INFO 11592 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:22:58.473  INFO 11592 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:22:58.473  INFO 11592 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:22:58.473  INFO 11592 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:22:58.572  INFO 11592 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:22:58.572  INFO 11592 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2534 ms
+2022-11-14 22:22:58.773  INFO 11592 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:22:58.824  INFO 11592 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 22:22:58.951  INFO 11592 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 22:22:59.078  INFO 11592 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 22:23:00.391  INFO 11592 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 22:23:00.414  INFO 11592 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:23:01.276  INFO 11592 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:23:01.285  INFO 11592 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:23:03.136  WARN 11592 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:23:03.730  INFO 11592 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:23:04.597  INFO 11592 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:23:04.682  INFO 11592 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:23:04.708  INFO 11592 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 9.382 seconds (JVM running for 11.074)
+2022-11-14 22:23:12.495  INFO 11592 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 22:23:12.497  INFO 11592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 22:23:12.499  INFO 11592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-14 22:23:12.543  INFO 11592 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 22:23:12.630  WARN 11592 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:23:12.641  WARN 11592 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:23:12.648  INFO 11592 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:23:14.513  INFO 11592 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:23:14.564  INFO 11592 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:23:19.460  INFO 11592 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/blog/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.showBlog', args=[145, {}]}
+2022-11-14 22:23:19.599  INFO 11592 --- [http-nio-8080-exec-2] com.chuchu.blog.aspect.LogAspect         : Result : blog
+2022-11-14 22:23:20.519  INFO 11592 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/comments/145', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CommentController.showComments', args=[145, {}]}
+2022-11-14 22:23:20.655  INFO 11592 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : blog :: commentList
+2022-11-14 22:23:24.880  INFO 11592 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:23:24.990  INFO 11592 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:23:29.142  INFO 11592 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:23:29.167  INFO 11592 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:23:30.066  INFO 11592 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:23:30.084  INFO 11592 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:23:30.945  INFO 11592 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:23:30.959  INFO 11592 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:28:40.890  INFO 11592 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:28:40.895  INFO 11592 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:28:40.916  INFO 11592 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 22:28:47.393  INFO 5600 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 5600 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:28:47.394 DEBUG 5600 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:28:47.395  INFO 5600 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:28:47.456  INFO 5600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 22:28:47.456  INFO 5600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 22:28:48.476  INFO 5600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:28:48.656  INFO 5600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:28:49.817  INFO 5600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:28:49.826  INFO 5600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:28:49.827  INFO 5600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:28:49.934  INFO 5600 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:28:49.935  INFO 5600 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2478 ms
+2022-11-14 22:28:50.197  INFO 5600 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:28:50.242  INFO 5600 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 22:28:50.398  INFO 5600 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 22:28:50.518  INFO 5600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 22:28:52.216  INFO 5600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 22:28:52.238  INFO 5600 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:28:53.362  INFO 5600 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:28:53.397  INFO 5600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:28:55.168  WARN 5600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:28:55.825  INFO 5600 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:28:56.571  INFO 5600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:28:56.607  INFO 5600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:28:56.622  INFO 5600 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 10.116 seconds (JVM running for 11.582)
+2022-11-14 22:28:57.358  INFO 5600 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:28:57.362  INFO 5600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:28:57.378  INFO 5600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 22:31:01.247  INFO 16200 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 16200 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:31:01.248 DEBUG 16200 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:31:01.249  INFO 16200 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:31:01.294  INFO 16200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 22:31:01.295  INFO 16200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 22:31:02.044  INFO 16200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:31:02.247  INFO 16200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:31:03.509  INFO 16200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:31:03.527  INFO 16200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:31:03.527  INFO 16200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:31:03.671  INFO 16200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:31:03.671  INFO 16200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2375 ms
+2022-11-14 22:31:03.882  INFO 16200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:31:03.922  INFO 16200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 22:31:04.039  INFO 16200 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 22:31:04.161  INFO 16200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 22:31:05.172  INFO 16200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 22:31:05.203  INFO 16200 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:31:06.391  INFO 16200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:31:06.406  INFO 16200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:31:08.012  WARN 16200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:31:08.454  INFO 16200 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:31:08.868  INFO 16200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:31:08.902  INFO 16200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:31:08.914  INFO 16200 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 8.249 seconds (JVM running for 9.633)
+2022-11-14 22:31:28.538  INFO 16200 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 22:31:28.540  INFO 16200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 22:31:28.542  INFO 16200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-14 22:31:28.671  INFO 16200 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 22:31:29.086  WARN 16200 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:31:29.113  WARN 16200 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:31:29.128  INFO 16200 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:31:34.845  INFO 16200 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:31:34.884  INFO 16200 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:31:40.343  INFO 16200 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:31:40.417  INFO 16200 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : tags
+2022-11-14 22:31:43.217  INFO 16200 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/tags/94', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 94, {}]}
+2022-11-14 22:31:43.240  INFO 16200 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : tags
+2022-11-14 22:31:44.493  INFO 16200 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:31:44.518  INFO 16200 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:31:46.553  INFO 16200 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/93', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 93, {}]}
+2022-11-14 22:31:46.569  INFO 16200 --- [http-nio-8080-exec-4] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:31:47.896  INFO 16200 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:31:47.919  INFO 16200 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:34:08.522  INFO 16200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:34:08.525  INFO 16200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:34:08.543  INFO 16200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-14 22:40:44.519  INFO 18904 --- [restartedMain] com.chuchu.blog.BlogApplication          : Starting BlogApplication using Java 1.8.0_321 on wcc-pc with PID 18904 (C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog\target\classes started by 86189 in C:\wcc\E-disk\Java\IdeaProjects\Blog-System\blog)
+2022-11-14 22:40:44.521 DEBUG 18904 --- [restartedMain] com.chuchu.blog.BlogApplication          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-11-14 22:40:44.521  INFO 18904 --- [restartedMain] com.chuchu.blog.BlogApplication          : The following profiles are active: dev
+2022-11-14 22:40:44.578  INFO 18904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-14 22:40:44.578  INFO 18904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-14 22:40:45.401  INFO 18904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-14 22:40:45.509  INFO 18904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+2022-11-14 22:40:46.543  INFO 18904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-14 22:40:46.552  INFO 18904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-14 22:40:46.552  INFO 18904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-14 22:40:46.642  INFO 18904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-14 22:40:46.642  INFO 18904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2063 ms
+2022-11-14 22:40:46.951  INFO 18904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-14 22:40:47.007  INFO 18904 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-11-14 22:40:47.190  INFO 18904 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-14 22:40:47.331  INFO 18904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-14 22:40:48.057  INFO 18904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-14 22:40:48.076  INFO 18904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-14 22:40:49.059  INFO 18904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-14 22:40:49.086  INFO 18904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:40:50.420  WARN 18904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-14 22:40:50.822  INFO 18904 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-14 22:40:51.283  INFO 18904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-14 22:40:51.315  INFO 18904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-14 22:40:51.325  INFO 18904 --- [restartedMain] com.chuchu.blog.BlogApplication          : Started BlogApplication in 7.404 seconds (JVM running for 8.662)
+2022-11-14 22:41:21.148  INFO 18904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-14 22:41:21.148  INFO 18904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-14 22:41:21.150  INFO 18904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-14 22:41:21.193  INFO 18904 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.IndexController.indexShow', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2022-11-14 22:41:21.315  WARN 18904 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:41:21.338  WARN 18904 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogList.size]; use collection function syntax instead [size(t.blogList)].
+2022-11-14 22:41:21.349  INFO 18904 --- [http-nio-8080-exec-1] com.chuchu.blog.aspect.LogAspect         : Result : index
+2022-11-14 22:41:52.704  INFO 18904 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:41:52.773  INFO 18904 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:41:53.669  INFO 18904 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.AboutMeController.aboutMe', args=[]}
+2022-11-14 22:41:53.676  INFO 18904 --- [http-nio-8080-exec-8] com.chuchu.blog.aspect.LogAspect         : Result : aboutMe
+2022-11-14 22:42:00.182  INFO 18904 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.ArchiveShowController.archives', args=[{}]}
+2022-11-14 22:42:00.203  INFO 18904 --- [http-nio-8080-exec-6] com.chuchu.blog.aspect.LogAspect         : Result : archive
+2022-11-14 22:43:59.615  INFO 18904 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.AboutMeController.aboutMe', args=[]}
+2022-11-14 22:43:59.616  INFO 18904 --- [http-nio-8080-exec-5] com.chuchu.blog.aspect.LogAspect         : Result : aboutMe
+2022-11-14 22:44:09.862  INFO 18904 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/categories/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.CategoryShowController.showCategory', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2022-11-14 22:44:09.912  INFO 18904 --- [http-nio-8080-exec-3] com.chuchu.blog.aspect.LogAspect         : Result : category
+2022-11-14 22:44:15.818  INFO 18904 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.chuchu.blog.controller.AboutMeController.aboutMe', args=[]}
+2022-11-14 22:44:15.819  INFO 18904 --- [http-nio-8080-exec-9] com.chuchu.blog.aspect.LogAspect         : Result : aboutMe
+2022-11-14 22:45:13.859  INFO 18904 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-14 22:45:13.872  INFO 18904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-14 22:45:13.887  INFO 18904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
